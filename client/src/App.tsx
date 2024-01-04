@@ -1,7 +1,7 @@
-function App() {
+function App(): JSX.Element {
   return (
     <>
-      <h1 className=""> SAY MY NAME</h1>
+      <h1 className="te">SAY MY NAME</h1>
     </>
   );
 }
