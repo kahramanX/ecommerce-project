@@ -1,10 +1,11 @@
-function App() {
+import "./index.css";
 
+const App = (): JSX.Element => {
   return (
     <>
-      <h2>First init :)</h2>
+      <h2 className="text-3xl font-bold underline">First tailwind :)</h2>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
