@@ -6,6 +6,21 @@ export default {
     fontFamily: {
       KoHo: ["KoHo", "system-ui", "sans-serif"],
     },
+    colors: {
+      // warm whites
+      grey1: "#FAF7F5",
+      grey2: "#D8D7DB",
+      grey3: "#C3C3C7",
+      // cold blacks
+      grey4: "#8E8D90",
+      grey5: "#2A2A2B",
+      grey6: "#1B1A1B",
+      // soft and eye catching pastels
+      violet: "#F5EBFF",
+      blue: "#EBF4FF",
+      green: "#F6FFEB",
+      orange: "#FFF5EB",
+    },
   },
   plugins: [],
 };
