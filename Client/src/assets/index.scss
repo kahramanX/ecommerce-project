@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button {
+  @apply layered-shadow bg-grey1 hover:bg-grey6 hover:text-grey1 border-grey6 border font-bold;
+}
+
+.layered-shadow {
+  @apply shadow-default hover:shadow-reset transition-shadow;
+}

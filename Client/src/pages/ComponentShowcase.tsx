@@ -12,6 +12,9 @@ const ComponentShowcase = (): JSX.Element => {
           Component Showcase
         </h1>
       </div>
+      <div className="p-10">
+        <button className="button px-2">+</button>
+      </div>
     </>
   );
 };

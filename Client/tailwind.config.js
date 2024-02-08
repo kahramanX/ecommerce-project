@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        default: "2px 2px 0px 0px rgba(0,0,0,1)",
+        reset: "0px 0px 0px 0px rgba(0,0,0,1)",
+      },
+    },
     fontFamily: {
       KoHo: ["KoHo", "system-ui", "sans-serif"],
     },
