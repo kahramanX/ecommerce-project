@@ -2,10 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+// Button styles
 .button {
-  @apply layered-shadow bg-grey1 hover:bg-grey6 hover:text-grey1 border-grey6 border font-bold;
+  @apply layered-box-shadow hover:bg-grey6 hover:text-grey1 border-grey6 border font-bold;
 }
 
-.layered-shadow {
-  @apply shadow-default hover:shadow-reset transition-shadow;
+// Box and button border effect
+.layered-box-shadow {
+  @apply shadow-boxDefault border border-grey6 hover:shadow-reset transition-shadow;
+}
+
+// Text input Styles
+.input {
+  @apply layered-input-shadow px-2 py-2 text-grey5 placeholder:text-grey2 font-bold;
+}
+
+// Text input border effect
+.layered-input-shadow {
+  @apply shadow-inputDefault border border-grey2 focus:outline-none focus:shadow-reset transition-shadow;
 }

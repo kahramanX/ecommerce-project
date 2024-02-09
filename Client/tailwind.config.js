@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        default: "2px 2px 0px 0px rgba(0,0,0,1)",
+        boxDefault: "2px 2px 0px 0px rgba(0,0,0,1)",
         reset: "0px 0px 0px 0px rgba(0,0,0,1)",
+        inputDefault: "2px 2px 0px 0px rgba(195,195,199,1)",
       },
     },
     fontFamily: {
