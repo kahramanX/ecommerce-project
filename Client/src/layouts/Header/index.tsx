@@ -13,7 +13,7 @@ const Header = (props: Props): JSX.Element => {
           <button className="block lg:hidden">
             <i className="material-symbols-sharp">menu</i>
           </button>
-          <div className="text-4xl font-bold text-center">PULL & BEAR</div>
+          <div className="text-4xl font-black text-center">PULL&BEAR</div>
           <button className="block lg:hidden">
             <i className="material-symbols-sharp">local_mall</i>
           </button>
