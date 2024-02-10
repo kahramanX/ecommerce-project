@@ -6,7 +6,7 @@ type Props = {};
 
 const Header = (props: Props): JSX.Element => {
   return (
-    <div className="grid gap-8 grid-cols-1 lg:grid-cols-1-2-1 center self-center border p-2 md:p-4 lg:p-10">
+    <header className="grid gap-8 grid-cols-1 lg:grid-cols-1-2-1 center self-center p-2 md:p-4 lg:p-10">
       <Left />
       <div className="border bg-orange p-4 lg:relative">
         <div className="flex justify-between lg:justify-center">
@@ -28,7 +28,7 @@ const Header = (props: Props): JSX.Element => {
         </div>
       </div>
       <Right />
-    </div>
+    </header>
   );
 };
 
