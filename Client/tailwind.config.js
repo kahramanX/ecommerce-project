@@ -8,6 +8,9 @@ export default {
         reset: "0px 0px 0px 0px rgba(0,0,0,1)",
         inputDefault: "2px 2px 0px 0px rgba(195,195,199,1)",
       },
+      gridTemplateColumns: {
+        "1-2-1": "1fr 2fr 1fr",
+      },
     },
     fontFamily: {
       KoHo: ["KoHo", "system-ui", "sans-serif"],

@@ -6,14 +6,14 @@ type Props = {};
 
 const Header = (props: Props): JSX.Element => {
   return (
-    <div className="grid gap-8 grid-cols-1 lg:grid-cols-[300px_minmax(300px,_1fr)_300px] center self-center border p-2 md:p-4 lg:p-10">
+    <div className="grid gap-8 grid-cols-1 lg:grid-cols-1-2-1 center self-center border p-2 md:p-4 lg:p-10">
       <Left />
       <div className="border bg-orange p-4 lg:relative">
         <div className="flex justify-between lg:justify-center">
           <button className="block lg:hidden">
             <i className="material-symbols-sharp">menu</i>
           </button>
-          <div className="text-4xl font-bold">PULL & BEAR</div>
+          <div className="text-4xl font-bold text-center">PULL & BEAR</div>
           <button className="block lg:hidden">
             <i className="material-symbols-sharp">local_mall</i>
           </button>
