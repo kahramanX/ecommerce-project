@@ -128,8 +128,6 @@ const ComponentShowcase = (): JSX.Element => {
           </select>
         </div>
       </div>
-      <h5 className="p-5 text-4xl italic border-b">Inputs</h5>
-      <div className="p-10"></div>
     </>
   );
 };
