@@ -1,12 +1,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "pages/home/App";
+import HomePage from "pages/home";
 import ComponentShowcase from "pages/ComponentShowcase";
 import "assets/index.scss";
+import generalBackgroundImage from "assets/generalBackgroundImage.webp";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <HomePage />,
   },
   {
     path: "/all/components",
@@ -15,7 +16,14 @@ const router = createBrowserRouter([
 ]);
 
 const Routes = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <div
+      className={`bg-center bg-repeat`}
+      style={{ backgroundImage: `url(${generalBackgroundImage})` }}
+    >
+      <RouterProvider router={router} />
+    </div>
+  );
 };
 
 export default Routes;
