@@ -1,3 +1,4 @@
+// Components
 import ReactHelmet from "components/ReactHelmet";
 
 const HomePage = (): JSX.Element => {

@@ -1,3 +1,4 @@
+// Components
 import ReactHelmet from "components/ReactHelmet";
 import { Link } from "react-router-dom";
 
@@ -12,6 +13,9 @@ const ComponentShowcase = (): JSX.Element => {
         <h1 className="text-center text-4xl md:text-8xl font-bold">
           Component Showcase
         </h1>
+        <button className="button px-4 py-2">
+          <Link to={"/"}>Go To HomePage</Link>
+        </button>
       </div>
       <h5 className="p-5 text-4xl italic border-b">Buttons</h5>
       <div className="p-10">
