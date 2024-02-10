@@ -91,23 +91,36 @@ const ComponentShowcase = (): JSX.Element => {
         <div className="mb-5">
           <input placeholder="First Name *" className="input" type="text" />
         </div>
-        <div className="mb-5">
-          <input id="myRadio1" className="mx-3" type="radio" />
-          <label htmlFor="myRadio1">Radio</label>
-          <input id="myRadio1" className="mx-3" type="radio" />
+        <div className="mb-5 flex gap-2">
+          <input id="myRadio1" name="radio" className="radio" type="radio" />
           <label htmlFor="myRadio1">Radio</label>
         </div>
-        <div className="mb-5">
-          <input id="myCheckbox" className="mx-3" type="checkbox" />
-          <label htmlFor="myCheckbox" className="text-md">
+        <div className="mb-5 flex gap-2">
+          <input id="myRadio2" name="radio" className="radio" type="radio" />
+          <label htmlFor="myRadio2">Radio</label>
+        </div>
+        <div className="mb-5 flex gap-2">
+          <input id="myCheckbox" className="checkbox" type="checkbox" />
+          <label htmlFor="myCheckbox" className="text-md ">
             Checkbox
           </label>
         </div>
-
+        <div className="mb-5 flex gap-2">
+          <input id="myCheckbox1" className="checkbox" type="checkbox" />
+          <label htmlFor="myCheckbox1" className="text-md">
+            Checkbox
+          </label>
+        </div>
         <div className="mb-5">
-          <select>
-            <option>TEST 1</option>
-            <option>TEST 2</option>
+          <select className="select-input w-20">
+            <option>TEST TEST </option>
+            <option>TEST TEST </option>
+          </select>
+        </div>
+        <div className="mb-5">
+          <select className="select-input w-40" defaultValue={"Colors"}>
+            <option>TEST TEST </option>
+            <option>TEST TEST </option>
           </select>
         </div>
       </div>

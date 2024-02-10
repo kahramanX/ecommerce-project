@@ -21,3 +21,18 @@
 .layered-input-shadow {
   @apply shadow-inputDefault border border-grey2 focus:outline-none focus:shadow-reset transition-shadow;
 }
+
+// Checkbox styles
+.checkbox {
+  @apply w-5 h-5 accent-grey6 appearance-none border-2 checked:before:content-[''] checked:before:w-3 checked:before:h-3 checked:before:bg-grey6 flex items-center justify-center;
+}
+
+// Radio styles
+.radio {
+  @apply w-5 h-5 accent-grey6 appearance-none rounded-full border-2 checked:before:content-[''] checked:before:rounded-full checked:before:w-3 checked:before:h-3 checked:before:bg-grey6 flex items-center justify-center;
+}
+
+// Select input Styles
+.select-input {
+  @apply layered-input-shadow px-2 py-2 text-grey5 placeholder:text-grey2 font-bold;
+}
