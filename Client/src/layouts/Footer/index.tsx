@@ -137,7 +137,7 @@ const Footer = (props: Props) => {
           <div className="text-xs font-bold">An ever young community</div>
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex gap-4 mt-6">
           {footerSocialIcons.map((social, index) => {
             return (
               <>
