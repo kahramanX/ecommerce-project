@@ -51,8 +51,3 @@
 .select-input {
   @apply layered-input-shadow px-2 py-2 text-grey5 placeholder:text-grey2 font-bold;
 }
-
-// Text shadow styles
-.text-shadow-sm {
-  @apply text-shadow-textDefault;
-}

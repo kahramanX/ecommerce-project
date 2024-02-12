@@ -39,18 +39,18 @@ const HomePage = (): JSX.Element => {
                     </div>
 
                     <div className="absolute bottom-0 left-0 m-5 lg:m-10">
-                      <div className="text-grey1 text-5xl lg:text-6xl font-bold mb-5">
+                      <div className="text-grey1 text-5xl lg:text-6xl font-bold mb-5 text-shadow-black">
                         GROWING IN
                         <br />
                         THE DARK
                       </div>
-                      <div className="text-grey6 text-sm lg:text-xl font-bold">
+                      <div className="text-grey6 text-sm lg:text-xl font-bold text-shadow-white">
                         NIGHT FALLS AND THE CITY GETS DARKER.
                       </div>
-                      <div className="text-grey6 text-sm lg:text-xl font-bold">
+                      <div className="text-grey6 text-sm lg:text-xl font-bold text-shadow-white">
                         NIGHT FALLS AND THE CITY GETS DARKER.
                       </div>
-                      <div className="text-grey6 text-sm lg:text-xl font-bold">
+                      <div className="text-grey6 text-sm lg:text-xl font-bold text-shadow-white">
                         NIGHT FALLS AND THE CITY GETS DARKER.
                       </div>
                       <button className="button px-4 py-2 bg-grey1 mt-4">

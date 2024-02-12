@@ -6,8 +6,9 @@ export default {
   theme: {
     extend: {
       textShadow: {
-        textDefault: "2px 2px 0px 0px rgba(0,0,0,1)",
+        black: "rgb(0, 0, 0) 2px 2px 0px",
         reset: "0px 0px 0px 0px rgba(0,0,0,1)",
+        white: "rgb(255,255,255) 2px 2px 0px",
       },
       boxShadow: {
         boxDefault: "2px 2px 0px 0px rgba(0,0,0,1)",
