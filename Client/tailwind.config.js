@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      textShadow: {
+        textDefault: "2px 2px 0px 0px rgba(0,0,0,1)",
+        reset: "0px 0px 0px 0px rgba(0,0,0,1)",
+      },
       boxShadow: {
         boxDefault: "2px 2px 0px 0px rgba(0,0,0,1)",
         reset: "0px 0px 0px 0px rgba(0,0,0,1)",
@@ -31,5 +37,16 @@ export default {
       orange: "#FFF5EB",
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") }
+      );
+    }),
+  ],
 };
