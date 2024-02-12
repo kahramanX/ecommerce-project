@@ -14,7 +14,7 @@ const Header = (props: Props): JSX.Element => {
             <i className="material-symbols-sharp">menu</i>
           </button>
           <div className="text-4xl font-black text-center">PULL&BEAR</div>
-          <div className="flex gap-6">
+          <div className="flex gap-6 flex-wrap">
             <button className="block lg:hidden">
               <i className="material-symbols-sharp">person</i>
             </button>
