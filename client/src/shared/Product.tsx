@@ -4,7 +4,7 @@ type Props = {};
 
 const Product = (props: Props) => {
     return (
-        <div className="layered-box-shadow ">
+        <div className="layered-box-shadow cursor-pointer">
             <div>
                 <img src="https://static.pullandbear.net/2/photos//2024/V/0/1/p/3555/325/712/3555325712_2_1_8.jpg" />
             </div>
