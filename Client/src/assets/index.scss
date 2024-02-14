@@ -4,50 +4,50 @@
 
 // Swiper Styles
 .swiper {
-  &-pagination {
-    @apply absolute top-0 right-0 left-auto m-3 lg:m-5 bottom-auto w-auto flex #{!important};
+    &-pagination {
+        @apply absolute top-0 right-0 left-auto m-3 lg:m-5 bottom-auto w-auto flex #{!important};
 
-    &-bullet {
-      @apply w-5 h-5 bg-grey1 rounded-none shadow-reset border opacity-100;
+        &-bullet {
+            @apply w-5 h-5 bg-grey1 rounded-none shadow-reset border opacity-100;
 
-      &-active {
-        @apply layered-box-shadow before:content-[''] before:w-2 before:h-2 before:bg-grey6 flex justify-center items-center;
-      }
+            &-active {
+                @apply layered-box-shadow before:content-[''] before:w-2 before:h-2 before:bg-grey6 flex justify-center items-center;
+            }
+        }
     }
-  }
 }
 
 // Button styles
 .button {
-  @apply layered-box-shadow hover:bg-grey6 hover:text-grey1 border-grey6 border font-bold;
+    @apply layered-box-shadow hover:bg-grey6 hover:text-grey1 border-grey6 border font-bold;
 }
 
 // Box and button border effect
 .layered-box-shadow {
-  @apply shadow-boxDefault border border-grey6 hover:shadow-reset transition-shadow;
+    @apply shadow-boxDefault border border-grey6 hover:shadow-reset transition-shadow;
 }
 
 // Text input Styles
 .input {
-  @apply layered-input-shadow px-2 py-2 text-grey5 placeholder:text-grey2 font-bold;
+    @apply layered-input-shadow px-2 py-2 text-grey5 placeholder:text-grey2 font-bold;
 }
 
 // Text input border effect
 .layered-input-shadow {
-  @apply shadow-inputDefault border border-grey2 focus:outline-none focus:shadow-reset transition-shadow;
+    @apply shadow-inputDefault border border-grey2 focus:outline-none focus:shadow-reset transition-shadow;
 }
 
 // Checkbox styles
 .checkbox {
-  @apply w-5 h-5 accent-grey6 appearance-none border-2 checked:before:content-[''] checked:before:w-3 checked:before:h-3 checked:before:bg-grey6 flex items-center justify-center;
+    @apply w-5 h-5 accent-grey6 appearance-none border-2 checked:before:content-[''] checked:before:w-3 checked:before:h-3 checked:before:bg-grey6 flex items-center justify-center;
 }
 
 // Radio styles
 .radio {
-  @apply w-5 h-5 accent-grey6 appearance-none rounded-full border-2 checked:before:content-[''] checked:before:rounded-full checked:before:w-3 checked:before:h-3 checked:before:bg-grey6 flex items-center justify-center;
+    @apply w-5 h-5 accent-grey6 appearance-none rounded-full border-2 checked:before:content-[''] checked:before:rounded-full checked:before:w-3 checked:before:h-3 checked:before:bg-grey6 flex items-center justify-center;
 }
 
 // Select input Styles
 .select-input {
-  @apply layered-input-shadow px-2 py-2 text-grey5 placeholder:text-grey2 font-bold;
+    @apply layered-input-shadow px-2 py-2 text-grey5 placeholder:text-grey2 font-bold;
 }
