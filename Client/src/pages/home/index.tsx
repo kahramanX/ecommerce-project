@@ -8,13 +8,14 @@ import { Pagination } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import Product from "shared/Product";
 
 const HomePage = (): JSX.Element => {
     return (
         <>
             <ReactHelmet titleName="Home" description="Home Page" />
             <main className="px-2 md:px-4 lg:px-10">
-                <div className="gap-8 grid grid-cols-1 lg:grid-cols-1-2-1 p-2">
+                <div className="gap-8 grid grid-cols-1 lg:grid-cols-1-2-1">
                     <div className="layered-box-shadow hidden lg:block lg:max-h-[40rem] bg-blue">
                         <img
                             src={"https://placehold.co/400"}
@@ -76,6 +77,32 @@ const HomePage = (): JSX.Element => {
                         />
                     </div>
                 </div>
+                <Swiper
+                    className="my-20"
+                    modules={[]}
+                    slidesPerView={2}
+                    spaceBetween={16}
+                    wrapperClass="py-2"
+                    breakpoints={{
+                        768: {
+                            slidesPerView: 3,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 32,
+                        },
+                    }}
+                >
+                    {[1, 2, 3].map(() => {
+                        return (
+                            <>
+                                <SwiperSlide>
+                                    <Product />
+                                </SwiperSlide>
+                            </>
+                        );
+                    })}
+                </Swiper>
             </main>
         </>
     );
