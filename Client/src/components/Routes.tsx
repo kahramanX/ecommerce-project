@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 //Components
-import HomePage from "pages/home";
+import HomePage from "pages/Home";
+import ProductDetail from "pages/ProductDetail";
 import ComponentShowcase from "pages/ComponentShowcase";
 import Header from "layouts/Header";
 import Footer from "layouts/Footer";
@@ -23,6 +24,16 @@ const router = createBrowserRouter([
             </>
         ),
         errorElement: <h1>error</h1>,
+    },
+    {
+        path: "/product/:ProductName",
+        element: (
+            <>
+                <Header />
+                <ProductDetail />
+                <Footer />
+            </>
+        ),
     },
     {
         path: "/all/components",
