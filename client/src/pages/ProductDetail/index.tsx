@@ -1,5 +1,6 @@
 // Components
 import ReactHelmet from "components/ReactHelmet";
+import Accordion from "shared/Accordion";
 
 type Props = {};
 
@@ -19,13 +20,14 @@ const ProductDetail = (props: Props): JSX.Element => {
                         </div>
                         <div className="text-xl font-bold">$49.90</div>
                         <div className=" grid grid-cols-9 gap-2">
-                            {Array.from({ length: 6 }).map(() => {
+                            {Array.from({ length: 6 }).map((val, index) => {
                                 return (
-                                    <>
-                                        <div className="border border-grey2 bg-grey1 p-1">
-                                            <div className="bg-[#000000] w-full h-7"></div>
-                                        </div>
-                                    </>
+                                    <div
+                                        key={index}
+                                        className="border border-grey2 bg-grey1 p-1"
+                                    >
+                                        <div className="bg-[#000000] w-full h-7"></div>
+                                    </div>
                                 );
                             })}
                         </div>
@@ -55,6 +57,9 @@ const ProductDetail = (props: Props): JSX.Element => {
                                     favorite
                                 </span>
                             </button>
+                        </div>
+                        <div className="border-2 p-2">
+                            <Accordion />
                         </div>
                     </div>
                 </div>

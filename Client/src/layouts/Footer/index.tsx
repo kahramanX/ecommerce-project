@@ -27,46 +27,40 @@ const Footer = (props: Props) => {
                     <div className="flex gap-4 mt-6">
                         {footerSocialIcons.map((social, index) => {
                             return (
-                                <>
-                                    <Link
-                                        key={index}
-                                        className="layered-box-shadow bg-grey1 p-0.5"
-                                        to={"/" + social.link}
-                                    >
-                                        {social.icon}
-                                    </Link>
-                                </>
+                                <Link
+                                    key={index}
+                                    className="layered-box-shadow bg-grey1 p-0.5"
+                                    to={"/" + social.link}
+                                >
+                                    {social.icon}
+                                </Link>
                             );
                         })}
                     </div>
                 </div>
                 {footerData.map((footer, index) => {
                     return (
-                        <>
-                            <div
-                                key={index}
-                                className={`layered-box-shadow ${footer.color} p-5`}
-                            >
-                                <div className="font-semibold text-2xl mb-4">
-                                    {footer.title}
-                                </div>
-                                <div className="flex flex-col">
-                                    {footer.links.map((link, index2) => {
-                                        return (
-                                            <>
-                                                <Link
-                                                    key={index2}
-                                                    className="font-bold mb-2 text-sm"
-                                                    to={"#"}
-                                                >
-                                                    {link}
-                                                </Link>
-                                            </>
-                                        );
-                                    })}
-                                </div>
+                        <div
+                            key={index}
+                            className={`layered-box-shadow ${footer.color} p-5`}
+                        >
+                            <div className="font-semibold text-2xl mb-4">
+                                {footer.title}
                             </div>
-                        </>
+                            <div className="flex flex-col">
+                                {footer.links.map((link, index2) => {
+                                    return (
+                                        <Link
+                                            key={index2}
+                                            className="font-bold mb-2 text-sm"
+                                            to={"#"}
+                                        >
+                                            {link}
+                                        </Link>
+                                    );
+                                })}
+                            </div>
+                        </div>
                     );
                 })}
             </footer>
