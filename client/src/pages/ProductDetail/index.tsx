@@ -18,12 +18,12 @@ const ProductDetail = (props: Props): JSX.Element => {
                             FITILLI KADIFE YAKALI KAPITONE MONT
                         </div>
                         <div className="text-xl font-bold">$49.90</div>
-                        <div className=" grid grid-cols-8 gap-2">
-                            {Array.from({ length: 14 }).map(() => {
+                        <div className=" grid grid-cols-9 gap-2">
+                            {Array.from({ length: 6 }).map(() => {
                                 return (
                                     <>
                                         <div className="border border-grey2 bg-grey1 p-1">
-                                            <div className="bg-[#e4ff36] w-full h-6"></div>
+                                            <div className="bg-[#000000] w-full h-7"></div>
                                         </div>
                                     </>
                                 );
