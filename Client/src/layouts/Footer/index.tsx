@@ -19,7 +19,7 @@ const Footer = (props: Props) => {
                         <div className="font-black text-4xl mb-4">
                             PULL&BEAR
                         </div>
-                        <div className="text-xs font-bold">
+                        <div className="text-sm font-bold">
                             An ever young community
                         </div>
                     </div>
@@ -56,7 +56,7 @@ const Footer = (props: Props) => {
                                             <>
                                                 <Link
                                                     key={index2}
-                                                    className="font-bold mb-2 text-xs"
+                                                    className="font-bold mb-2 text-sm"
                                                     to={"#"}
                                                 >
                                                     {link}

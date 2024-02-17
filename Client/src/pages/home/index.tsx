@@ -105,8 +105,8 @@ const HomePage = (): JSX.Element => {
                     </Swiper>
                 </section>
 
-                <section>
-                    <div className="layered-box-shadow bg-green flex flex-col items-center p-4 gap-4">
+                <section className="lg:my-60">
+                    <div className="layered-box-shadow bg-green flex flex-col items-center py-4 lg:py-8 gap-4">
                         <div className="text-2xl lg:text-3xl font-bold">
                             PROMOTIONS
                         </div>
@@ -114,7 +114,7 @@ const HomePage = (): JSX.Element => {
                             UP TO -40%
                         </div>
                         <div className="italic">On Selected Items</div>
-                        <button className="button text-xs bg-grey1 px-2 py-2">
+                        <button className="button text-xs lg:text-base bg-grey1 px-2 py-2 lg:px-4">
                             Shop All
                         </button>
                     </div>
