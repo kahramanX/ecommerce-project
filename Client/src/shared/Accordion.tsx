@@ -3,10 +3,15 @@ import React, { useState } from "react";
 type Props = {
     children: React.ReactNode;
     headerContent: string;
+    IsOpenOnLoaded?: boolean;
 };
 
-const Accordion = ({ headerContent, children }: Props): JSX.Element => {
-    const [isActive, setIsActive] = useState<boolean>(false);
+const Accordion = ({
+    headerContent,
+    children,
+    IsOpenOnLoaded = false,
+}: Props): JSX.Element => {
+    const [isActive, setIsActive] = useState<boolean>(IsOpenOnLoaded);
 
     return (
         <div className="mb-4">

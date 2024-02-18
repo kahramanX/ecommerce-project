@@ -1,4 +1,5 @@
 // Components
+import Comments from "components/Comments";
 import ReactHelmet from "components/ReactHelmet";
 import Accordion from "shared/Accordion";
 
@@ -59,7 +60,10 @@ const ProductDetail = (props: Props): JSX.Element => {
                             </button>
                         </div>
                         <div className="">
-                            <Accordion headerContent={"REF 438129"}>
+                            <Accordion
+                                headerContent={"REF 438129"}
+                                IsOpenOnLoaded={true}
+                            >
                                 <div>
                                     %100 pamuklu, farklı renkleri mevcut,
                                     fermuarlı ve üstü düğmeli, kemer köprülü,
@@ -74,22 +78,10 @@ const ProductDetail = (props: Props): JSX.Element => {
                                 </div>
                             </Accordion>
 
-                            <Accordion headerContent={"REVIEWS (3)"}>
-                                <div className="border border-grey2 p-2 lg:p-4">
-                                    <div className="flex justify-between">
-                                        <div className="mb-2">
-                                            Celina Novotna
-                                        </div>
-                                        <div className="text-grey4 text-sm font-bold">
-                                            01 January 2024
-                                        </div>
-                                    </div>
-                                    <div>
-                                        Uzun kollu, bisiklet yaka, dikiş
-                                        detaylı, kırmızı sweatshirt.
-                                    </div>
-                                </div>
-                            </Accordion>
+                            <Comments
+                                commentHeader="REVIEWS (3)"
+                                commentItems={["1", "2", "3"]}
+                            />
                         </div>
                     </div>
                 </div>
