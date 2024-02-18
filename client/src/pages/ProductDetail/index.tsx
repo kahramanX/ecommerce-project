@@ -1,11 +1,25 @@
+import { useState } from "react";
+
 // Components
 import Comments from "components/Comments";
 import ReactHelmet from "components/ReactHelmet";
 import Accordion from "shared/Accordion";
 
+// Swiper Components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Thumbs } from "swiper/modules";
+
+// Swiper Styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/thumbs";
+
 type Props = {};
 
 const ProductDetail = (props: Props): JSX.Element => {
+    // store thumbs swiper instance
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
     return (
         <>
             <ReactHelmet
@@ -14,7 +28,21 @@ const ProductDetail = (props: Props): JSX.Element => {
             />
             <main className="p-2 lg:px-10 ">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="border p-20">left</div>
+                    <div className="border p-20">
+                        <Swiper
+                            modules={[Thumbs]}
+                            thumbs={{ swiper: thumbsSwiper }}
+                        ></Swiper>
+
+                        <Swiper
+                            modules={[Thumbs]}
+                            watchSlidesProgress
+                            onSwiper={() => setThumbsSwiper}
+                        >
+                            <SwiperSlide>TEST</SwiperSlide>
+                        </Swiper>
+                    </div>
+
                     <div className="layered-box-shadow flex flex-col gap-4 p-3 bg-violet">
                         <div className="font-bold text-lg">
                             FITILLI KADIFE YAKALI KAPITONE MONT
