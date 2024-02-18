@@ -53,13 +53,43 @@ const ProductDetail = (props: Props): JSX.Element => {
                             </button>
 
                             <button className="button bg-grey1 flex items-center p-2">
-                                <span className="material-symbols-sharp">
+                                <i className="material-symbols-sharp">
                                     favorite
-                                </span>
+                                </i>
                             </button>
                         </div>
-                        <div className="border-2 p-2">
-                            <Accordion />
+                        <div className="">
+                            <Accordion headerContent={"REF 438129"}>
+                                <div>
+                                    %100 pamuklu, farklı renkleri mevcut,
+                                    fermuarlı ve üstü düğmeli, kemer köprülü,
+                                    beş cepli, straight yüksek bel jean.
+                                </div>
+                            </Accordion>
+                            <Accordion headerContent={"COMPOSITION & CARE"}>
+                                <div>
+                                    %100 pamuklu, farklı renkleri mevcut,
+                                    fermuarlı ve üstü düğmeli, kemer köprülü,
+                                    beş cepli, straight yüksek bel jean.
+                                </div>
+                            </Accordion>
+
+                            <Accordion headerContent={"REVIEWS (3)"}>
+                                <div className="border border-grey2 p-2 lg:p-4">
+                                    <div className="flex justify-between">
+                                        <div className="mb-2">
+                                            Celina Novotna
+                                        </div>
+                                        <div className="text-grey4 text-sm font-bold">
+                                            01 January 2024
+                                        </div>
+                                    </div>
+                                    <div>
+                                        Uzun kollu, bisiklet yaka, dikiş
+                                        detaylı, kırmızı sweatshirt.
+                                    </div>
+                                </div>
+                            </Accordion>
                         </div>
                     </div>
                 </div>
