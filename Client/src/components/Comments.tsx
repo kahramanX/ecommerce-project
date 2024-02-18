@@ -1,5 +1,6 @@
 // Components
 import Accordion from "shared/Accordion";
+import CommentItem from "shared/CommentItem";
 
 type Props = {
     commentHeader: string;
@@ -11,18 +12,12 @@ const Comments = ({ commentHeader, commentItems }: Props): JSX.Element => {
         <Accordion headerContent={commentHeader}>
             {commentItems.map((comment, index) => {
                 return (
-                    <div className="border border-grey2 p-2 lg:p-4 mb-2 lg:mb-4">
-                        <div className="flex justify-between">
-                            <div className="mb-2">Celina Novotna</div>
-                            <div className="text-grey4 text-sm font-bold">
-                                01 January 2024
-                            </div>
-                        </div>
-                        <div>
-                            Uzun kollu, bisiklet yaka, dikiş detaylı, kırmızı
-                            sweatshirt.
-                        </div>
-                    </div>
+                    <CommentItem
+                        commenterName="Celina Novotna"
+                        commenterDate="01 January 2024"
+                        commentContent="Uzun kollu, bisiklet yaka, dikiş detaylı, kırmızı
+                sweatshirt."
+                    />
                 );
             })}
         </Accordion>
