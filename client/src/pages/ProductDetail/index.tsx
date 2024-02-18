@@ -6,8 +6,8 @@ import ReactHelmet from "components/ReactHelmet";
 import Accordion from "shared/Accordion";
 
 // Swiper Components
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Thumbs } from "swiper/modules";
+import { Swiper, SwiperSlide, SwiperClass } from "swiper/react";
+import { Thumbs, Navigation } from "swiper/modules";
 
 // Swiper Styles
 import "swiper/css";
@@ -18,7 +18,16 @@ type Props = {};
 
 const ProductDetail = (props: Props): JSX.Element => {
     // store thumbs swiper instance
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [thumbs, setThumbs] = useState<SwiperClass>();
+
+    const images = [
+        "https://static.pullandbear.net/2/photos//2024/V/0/1/p/7555/358/712/7555358712_2_2_8.jpg?imwidth=850",
+        "https://static.pullandbear.net/2/photos//2024/V/0/1/p/7555/358/712/7555358712_2_3_8.jpg?imwidth=850",
+        "https://static.pullandbear.net/2/photos//2024/V/0/1/p/7555/358/712/7555358712_2_4_8.jpg?imwidth=850",
+        "https://static.pullandbear.net/2/photos//2024/V/0/1/p/7555/358/712/7555358712_2_6_8.jpg?imwidth=850",
+        "https://static.pullandbear.net/2/photos//2024/V/0/1/p/7555/358/712/7555358712_2_7_8.jpg?imwidth=850",
+        "https://static.pullandbear.net/2/photos//2024/V/0/1/p/7555/358/712/7555358712_2_8_8.jpg?imwidth=850",
+    ];
 
     return (
         <>
@@ -28,18 +37,38 @@ const ProductDetail = (props: Props): JSX.Element => {
             />
             <main className="p-2 lg:px-10 ">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="border p-20">
+                    <div className="border">
                         <Swiper
-                            modules={[Thumbs]}
-                            thumbs={{ swiper: thumbsSwiper }}
-                        ></Swiper>
+                            loop={true}
+                            modules={[Navigation, Thumbs]}
+                            thumbs={{
+                                swiper:
+                                    thumbs && !thumbs.destroyed ? thumbs : null,
+                            }}
+                            navigation
+                        >
+                            {images.map((val, index) => {
+                                return (
+                                    <SwiperSlide>
+                                        <img src={val} />
+                                        <div>{index}</div>
+                                    </SwiperSlide>
+                                );
+                            })}
+                        </Swiper>
 
                         <Swiper
-                            modules={[Thumbs]}
-                            watchSlidesProgress
-                            onSwiper={() => setThumbsSwiper}
+                            slidesPerView={3}
+                            onSwiper={(swiper) => setThumbs(swiper)}
                         >
-                            <SwiperSlide>TEST</SwiperSlide>
+                            {images.map((val, index) => {
+                                return (
+                                    <SwiperSlide>
+                                        <img src={val} />
+                                        <div>{index}</div>
+                                    </SwiperSlide>
+                                );
+                            })}
                         </Swiper>
                     </div>
 
