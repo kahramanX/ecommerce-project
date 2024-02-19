@@ -67,7 +67,7 @@ const ProductDetail = (props: Props): JSX.Element => {
                             >
                                 {images.map((val, index) => {
                                     return (
-                                        <SwiperSlide className="border-grey4 border">
+                                        <SwiperSlide className="border-grey4 border cursor-pointer">
                                             <img
                                                 src={val}
                                                 className="w-full h-full object-contain lg:object-cover"
