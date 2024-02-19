@@ -70,7 +70,7 @@ const ProductDetail = (props: Props): JSX.Element => {
                                         <SwiperSlide className="border-grey4 border cursor-pointer">
                                             <img
                                                 src={val}
-                                                className="w-full h-full object-contain lg:object-cover"
+                                                className="w-full h-full object-contain lg:object-cover z-0"
                                             />
                                         </SwiperSlide>
                                     );
@@ -94,7 +94,7 @@ const ProductDetail = (props: Props): JSX.Element => {
                                         <SwiperSlide>
                                             <img
                                                 src={val}
-                                                className="w-full h-full object-contain lg:object-cover"
+                                                className="w-full h-full object-contain lg:object-cover z-0"
                                             />
                                         </SwiperSlide>
                                     );
