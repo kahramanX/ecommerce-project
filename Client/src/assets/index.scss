@@ -17,6 +17,14 @@
     }
 }
 
+.product-detail-thumb-container {
+    .swiper-wrapper {
+        .swiper-slide-thumb-active {
+            @apply layered-box-shadow;
+        }
+    }
+}
+
 // Button styles
 .button {
     @apply layered-box-shadow hover:bg-grey6 hover:text-grey1 border-grey6 border font-bold;

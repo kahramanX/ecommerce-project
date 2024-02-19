@@ -37,42 +37,74 @@ const ProductDetail = (props: Props): JSX.Element => {
             />
             <main className="p-2 lg:px-10 ">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="border">
-                        <Swiper
-                            loop={true}
-                            modules={[Navigation, Thumbs]}
-                            thumbs={{
-                                swiper:
-                                    thumbs && !thumbs.destroyed ? thumbs : null,
-                            }}
-                            navigation
-                        >
-                            {images.map((val, index) => {
-                                return (
-                                    <SwiperSlide>
-                                        <img src={val} />
-                                        <div>{index}</div>
-                                    </SwiperSlide>
-                                );
-                            })}
-                        </Swiper>
+                    <div className=" flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:h-[34rem]">
+                        <div className="lg:h-[30rem]">
+                            <button className="hidden lg:flex button bg-grey1 w-full py-2 lg:m-2 lg:ms-0 lg:mt-0 justify-center items-center gap-2 text-sm lg:mb-4">
+                                <i className="material-symbols-sharp text-xs">
+                                    arrow_back
+                                </i>
+                                <span>Back</span>
+                            </button>
 
-                        <Swiper
-                            slidesPerView={3}
-                            onSwiper={(swiper) => setThumbs(swiper)}
-                        >
-                            {images.map((val, index) => {
-                                return (
-                                    <SwiperSlide>
-                                        <img src={val} />
-                                        <div>{index}</div>
-                                    </SwiperSlide>
-                                );
-                            })}
-                        </Swiper>
+                            <Swiper
+                                className="product-detail-thumb-container w-full lg:h-full lg:pe-1"
+                                wrapperClass="w-full h-fit lg:grid lg:grid-cols-2 gap-4"
+                                modules={[Navigation]}
+                                slidesPerView={4}
+                                navigation={true}
+                                direction="horizontal"
+                                autoHeight={false}
+                                height={500}
+                                onSwiper={(swiper) => setThumbs(swiper)}
+                                loop={true}
+                                breakpoints={{
+                                    1024: {
+                                        direction: "vertical",
+                                        height: 800,
+                                        loop: false,
+                                    },
+                                }}
+                            >
+                                {images.map((val, index) => {
+                                    return (
+                                        <SwiperSlide className="border-grey4 border">
+                                            <img
+                                                src={val}
+                                                className="w-full h-full object-contain lg:object-cover"
+                                            />
+                                        </SwiperSlide>
+                                    );
+                                })}
+                            </Swiper>
+                        </div>
+                        <div>
+                            <Swiper
+                                className="h-[30rem] lg:h-full lg:w-full pointer-events-none layered-box-shadow"
+                                modules={[Thumbs]}
+                                loop={true}
+                                thumbs={{
+                                    swiper:
+                                        thumbs && !thumbs.destroyed
+                                            ? thumbs
+                                            : null,
+                                }}
+                            >
+                                {images.map((val, index) => {
+                                    return (
+                                        <SwiperSlide>
+                                            <img
+                                                src={val}
+                                                className="w-full h-full object-contain lg:object-cover"
+                                            />
+                                        </SwiperSlide>
+                                    );
+                                })}
+                            </Swiper>
+                        </div>
                     </div>
+                    {/* <div className="border">s</div> */}
 
-                    <div className="layered-box-shadow flex flex-col gap-4 p-3 bg-violet">
+                    <div className="layered-box-shadow flex flex-col gap-4 p-3 bg-violet h-fit">
                         <div className="font-bold text-lg">
                             FITILLI KADIFE YAKALI KAPITONE MONT
                         </div>
