@@ -5,7 +5,7 @@ type Props = {};
 const Newsletter = (props: Props) => {
     return (
         <section className="px-2 lg:px-10 lg:my-60">
-            <div className="layered-box-shadow bg-blue flex flex-col items-center py-4 lg:py-8 gap-4">
+            <div className="layered-box-shadow bg-blue flex flex-col items-center text-center p-4 lg:p-8 gap-4">
                 <div className="text-2xl lg:text-3xl font-bold">
                     Get 10% Discount
                 </div>
@@ -13,7 +13,7 @@ const Newsletter = (props: Props) => {
                     Subscribe to out newsletter to get the latest offers &
                     promotion
                 </div>
-                <div className="flex flex-col gap-4 w-72">
+                <div className="flex flex-col gap-4 lg:w-80">
                     <input
                         placeholder="First Name *"
                         className="input text-xs"
