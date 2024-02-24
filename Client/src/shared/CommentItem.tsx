@@ -1,3 +1,6 @@
+// Components
+import Text from "shared/Text";
+
 type Props = {
     commenterName: string;
     commenterDate: string;
@@ -12,12 +15,30 @@ const CommentItem = ({
     return (
         <div className="border border-grey2 p-2 lg:p-4 mb-2 lg:mb-4">
             <div className="flex justify-between">
-                <div className="mb-2">{commenterName}</div>
-                <div className="text-grey4 text-sm font-bold">
-                    {commenterDate}
-                </div>
+                <Text
+                    ElementTag="div"
+                    fontSize="text-base"
+                    fontColor="text-grey6"
+                    fontWeight="font-semibold"
+                    extraClass="mb-2"
+                    textContent={commenterName}
+                />
+                <Text
+                    ElementTag="div"
+                    fontSize="text-sm"
+                    fontColor="text-grey4"
+                    fontWeight="font-bold"
+                    extraClass="mb-2"
+                    textContent={commenterDate}
+                />
             </div>
-            <div>{commentContent}</div>
+            <Text
+                ElementTag="div"
+                fontSize="text-base"
+                fontColor="text-grey6"
+                fontWeight="font-bold"
+                textContent={commentContent}
+            />
         </div>
     );
 };

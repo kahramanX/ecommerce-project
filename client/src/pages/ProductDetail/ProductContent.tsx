@@ -2,16 +2,29 @@
 import Comments from "components/Comments";
 import Accordion from "shared/Accordion";
 import Icon from "shared/Icon";
+import Text from "shared/Text";
 
 type Props = {};
 
 const ProductContent = (props: Props): JSX.Element => {
     return (
         <div className="layered-box-shadow flex flex-col gap-4 p-3 bg-violet h-fit">
-            <div className="font-bold text-lg">
-                FITILLI KADIFE YAKALI KAPITONE MONT
-            </div>
-            <div className="text-xl font-bold">$49.90</div>
+            <Text
+                ElementTag="div"
+                fontSize="text-lg"
+                fontColor="text-grey6"
+                fontWeight="font-bold"
+                textContent={<>FITILLI KADIFE YAKALI KAPITONE MONT</>}
+            />
+
+            <Text
+                ElementTag="div"
+                fontSize="text-xl"
+                fontColor="text-grey6"
+                fontWeight="font-bold"
+                textContent={<>$49.90</>}
+            />
+
             <div className=" grid grid-cols-9 gap-2">
                 {Array.from({ length: 6 }).map((val, index) => {
                     return (
@@ -33,12 +46,21 @@ const ProductContent = (props: Props): JSX.Element => {
                 </select>
             </div>
             <div className="flex justify-between">
-                <div className="text-sm font-semibold">
-                    Model: 174 cm tall and size S
-                </div>
-                <div className="text-sm font-semibold underline">
-                    Size Guide
-                </div>
+                <Text
+                    ElementTag="div"
+                    fontSize="text-sm"
+                    fontColor="text-grey6"
+                    fontWeight="font-semibold"
+                    textContent={"Model: 174 cm tall and size S"}
+                />
+                <Text
+                    ElementTag="div"
+                    fontSize="text-sm"
+                    fontColor="text-grey6"
+                    fontWeight="font-semibold"
+                    extraClass="underline"
+                    textContent={"Size Guide"}
+                />
             </div>
             <div className="flex gap-4">
                 <button className="button bg-grey1 text-sm w-full">
@@ -51,18 +73,34 @@ const ProductContent = (props: Props): JSX.Element => {
             </div>
             <div className="">
                 <Accordion headerContent={"REF 438129"} IsOpenOnLoaded={true}>
-                    <div>
-                        %100 pamuklu, farklı renkleri mevcut, fermuarlı ve üstü
-                        düğmeli, kemer köprülü, beş cepli, straight yüksek bel
-                        jean.
-                    </div>
+                    <Text
+                        ElementTag="div"
+                        fontSize="text-base"
+                        fontColor="text-grey6"
+                        fontWeight="font-bold"
+                        textContent={
+                            <>
+                                %100 pamuklu, farklı renkleri mevcut, fermuarlı
+                                ve üstü düğmeli, kemer köprülü, beş cepli,
+                                straight yüksek bel jean.
+                            </>
+                        }
+                    />
                 </Accordion>
                 <Accordion headerContent={"COMPOSITION & CARE"}>
-                    <div>
-                        %100 pamuklu, farklı renkleri mevcut, fermuarlı ve üstü
-                        düğmeli, kemer köprülü, beş cepli, straight yüksek bel
-                        jean.
-                    </div>
+                    <Text
+                        ElementTag="div"
+                        fontSize="text-base"
+                        fontColor="text-grey6"
+                        fontWeight="font-bold"
+                        textContent={
+                            <>
+                                %100 pamuklu, farklı renkleri mevcut, fermuarlı
+                                ve üstü düğmeli, kemer köprülü, beş cepli,
+                                straight yüksek bel jean.
+                            </>
+                        }
+                    />
                 </Accordion>
 
                 <Comments

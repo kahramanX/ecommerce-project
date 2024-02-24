@@ -5,6 +5,7 @@ import { footerData, footerSocialIcons } from "layouts/Footer/data";
 
 // Components
 import Newsletter from "./Newsletter";
+import Text from "shared/Text";
 
 type Props = {};
 
@@ -16,12 +17,21 @@ const Footer = (props: Props) => {
             <footer className="grid p-2 md:p-4 lg:p-10 gap-8 grid-cols-1 lg:grid-cols-4">
                 <div className="layered-box-shadow bg-orange p-5 flex flex-col justify-between">
                     <div>
-                        <div className="font-black text-4xl mb-4">
-                            PULL&BEAR
-                        </div>
-                        <div className="text-sm font-bold">
-                            An ever young community
-                        </div>
+                        <Text
+                            ElementTag="div"
+                            fontSize="text-4xl"
+                            fontColor="text-grey6"
+                            fontWeight="font-black"
+                            extraClass="mb-4"
+                            textContent="PULL&BEAR"
+                        />
+                        <Text
+                            ElementTag="div"
+                            fontSize="text-sm"
+                            fontColor="text-grey6"
+                            fontWeight="font-bold"
+                            textContent="An ever young community"
+                        />
                     </div>
 
                     <div className="flex gap-4 mt-6">
@@ -44,9 +54,14 @@ const Footer = (props: Props) => {
                             key={index}
                             className={`layered-box-shadow ${footer.color} p-5`}
                         >
-                            <div className="font-semibold text-2xl mb-4">
-                                {footer.title}
-                            </div>
+                            <Text
+                                ElementTag="div"
+                                fontSize="text-2xl"
+                                fontColor="text-grey6"
+                                fontWeight="font-semibold"
+                                extraClass="mb-4"
+                                textContent={footer.title}
+                            />
                             <div className="flex flex-col">
                                 {footer.links.map((link, index2) => {
                                     return (

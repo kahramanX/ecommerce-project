@@ -3,6 +3,7 @@ import { useState } from "react";
 // Components
 import Modal from "react-modal";
 import Icon from "shared/Icon";
+import Text from "shared/Text";
 
 type Props = {};
 
@@ -26,9 +27,14 @@ const Menu = (props: Props) => {
 
     return (
         <>
-            <div className="font-bold cursor-pointer" onClick={openModal}>
-                MENU
-            </div>
+            <Text
+                ElementTag="div"
+                fontSize="text-md"
+                fontColor="text-grey6"
+                fontWeight="font-bold"
+                textContent="MENU"
+                onClick={openModal}
+            />
 
             <Modal
                 isOpen={modalIsOpen}
