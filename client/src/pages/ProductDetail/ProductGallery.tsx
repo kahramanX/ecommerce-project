@@ -11,7 +11,7 @@ import "swiper/css/thumbs";
 
 type Props = {};
 
-const ProductSlider = (props: Props): JSX.Element => {
+const ProductGallery = (props: Props): JSX.Element => {
     // store thumbs swiper instance
     const [thumbs, setThumbs] = useState<SwiperClass>();
 
@@ -88,4 +88,4 @@ const ProductSlider = (props: Props): JSX.Element => {
     );
 };
 
-export default ProductSlider;
+export default ProductGallery;
