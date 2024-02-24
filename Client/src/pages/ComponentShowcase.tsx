@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 // Components
 import ReactHelmet from "components/ReactHelmet";
-import { Link } from "react-router-dom";
+import Icon from "shared/Icon";
 
 const ComponentShowcase = (): JSX.Element => {
     return (
@@ -39,7 +41,7 @@ const ComponentShowcase = (): JSX.Element => {
                 </div>
                 <div className="mb-5">
                     <button className="button text-sm flex p-2">
-                        <i className="material-symbols-sharp">close</i>
+                        <Icon name="close" />
                     </button>
                 </div>
                 <div className="mb-5">

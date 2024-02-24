@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+// Components
+import Icon from "shared/Icon";
+
 // Swiper Components
 import { Swiper, SwiperSlide, SwiperClass } from "swiper/react";
 import { Thumbs, Navigation } from "swiper/modules";
@@ -28,7 +31,7 @@ const ProductGallery = (props: Props): JSX.Element => {
         <div className=" flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:h-[34rem]">
             <div className="lg:h-[30rem]">
                 <button className="hidden lg:flex button bg-grey1 w-full py-2 lg:m-2 lg:ms-0 lg:mt-0 justify-center items-center gap-2 text-sm lg:mb-4">
-                    <i className="material-symbols-sharp text-xs">arrow_back</i>
+                    <Icon name="arrow_back" extraClass="text-xs" />
                     <span>Back</span>
                 </button>
 

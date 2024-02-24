@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Icon from "shared/Icon";
 
 type Props = {
     children: React.ReactNode;
@@ -23,11 +24,7 @@ const Accordion = ({
             >
                 <div className="text-xl font-bold">{headerContent}</div>
                 <div>
-                    {isActive ? (
-                        <i className="material-symbols-sharp">remove</i>
-                    ) : (
-                        <i className="material-symbols-sharp">add</i>
-                    )}
+                    {isActive ? <Icon name="remove" /> : <Icon name="add" />}
                 </div>
             </div>
             {isActive && <div className="font-semibold mt-2">{children}</div>}

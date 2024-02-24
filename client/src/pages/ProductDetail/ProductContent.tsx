@@ -1,6 +1,7 @@
 // Components
 import Comments from "components/Comments";
 import Accordion from "shared/Accordion";
+import Icon from "shared/Icon";
 
 type Props = {};
 
@@ -45,7 +46,7 @@ const ProductContent = (props: Props): JSX.Element => {
                 </button>
 
                 <button className="button bg-grey1 flex items-center p-2">
-                    <i className="material-symbols-sharp">favorite</i>
+                    <Icon name="favorite" />
                 </button>
             </div>
             <div className="">
