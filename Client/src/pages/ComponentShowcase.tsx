@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // Components
 import ReactHelmet from "components/ReactHelmet";
 import Icon from "shared/Icon";
+import Input from "shared/Input";
 
 const ComponentShowcase = (): JSX.Element => {
     return (
@@ -18,6 +19,16 @@ const ComponentShowcase = (): JSX.Element => {
                 <button className="button px-4 py-2">
                     <Link to={"/"}>Go To HomePage</Link>
                 </button>
+            </div>
+            <div className="m-20">
+                <Input
+                    type="text"
+                    placeholder="TEST TEST TEST"
+                    parentClassName="relative w-fit"
+                    inputClassName="w-full"
+                    iconClassName="absolute top-1/2 transform -translate-x-8 -translate-y-1/2 text-grey3"
+                    iconName="search"
+                />
             </div>
             <h5 className="p-5 text-4xl italic border-b">Buttons</h5>
             <div className="p-10">
