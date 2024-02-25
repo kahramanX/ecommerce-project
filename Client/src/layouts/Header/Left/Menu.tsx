@@ -8,8 +8,8 @@ import Text from "shared/Text";
 type Props = {};
 
 const customStyles = {
-    content: {},
-    overlay: { zIndex: 5 },
+    content: { zIndex: 20 },
+    overlay: { zIndex: 15 },
 };
 
 const Menu = (props: Props) => {

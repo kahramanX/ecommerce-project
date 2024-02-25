@@ -15,8 +15,12 @@ const Comments = ({ commentHeader, commentItems }: Props): JSX.Element => {
                     <CommentItem
                         commenterName="Celina Novotna"
                         commenterDate="01 January 2024"
-                        commentContent="Uzun kollu, bisiklet yaka, dikiş detaylı, kırmızı
-                sweatshirt."
+                        commentContent={
+                            <>
+                                Uzun kollu, bisiklet yaka, dikiş detaylı,
+                                kırmızı sweatshirt.
+                            </>
+                        }
                     />
                 );
             })}

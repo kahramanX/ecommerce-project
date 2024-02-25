@@ -4,7 +4,7 @@ import Text from "shared/Text";
 type Props = {
     commenterName: string;
     commenterDate: string;
-    commentContent: string;
+    commentContent: string | JSX.Element;
 };
 
 const CommentItem = ({
@@ -37,7 +37,7 @@ const CommentItem = ({
                 fontSize="text-base"
                 fontColor="text-grey6"
                 fontWeight="font-bold"
-                textContent={commentContent}
+                textContent={<>{commentContent}</>}
             />
         </div>
     );
