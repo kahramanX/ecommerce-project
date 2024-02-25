@@ -5,6 +5,7 @@ import ReactHelmet from "components/ReactHelmet";
 import Icon from "shared/Icon";
 import Input from "shared/Input";
 import Checkbox from "shared/Checkbox";
+import RadioInput from "shared/RadioInput";
 
 const ComponentShowcase = (): JSX.Element => {
     return (
@@ -41,6 +42,18 @@ const ComponentShowcase = (): JSX.Element => {
                     htmlFor="check2"
                     inputId="check2"
                     labelContent="merhaba"
+                />
+                <RadioInput
+                    htmlFor="radio1"
+                    inputId="radio1"
+                    inputName="yoo"
+                    labelContent="radiooooo noo"
+                />
+                <RadioInput
+                    htmlFor="radio2"
+                    inputId="radio2"
+                    inputName="yoo"
+                    labelContent="radiooooo noo"
                 />
             </div>
             <h5 className="p-5 text-4xl italic border-b">Buttons</h5>
