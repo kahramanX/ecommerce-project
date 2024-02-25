@@ -21,7 +21,7 @@ const ComponentShowcase = (): JSX.Element => {
                     <Link to={"/"}>Go To HomePage</Link>
                 </button>
             </div>
-            <div className="m-20">
+            <div className="m-10">
                 <Input
                     type="text"
                     placeholder="TEST TEST TEST"
@@ -36,13 +36,11 @@ const ComponentShowcase = (): JSX.Element => {
                     htmlFor="check1"
                     inputId="check1"
                     labelContent="merhaba"
-                    labelClassName=""
                 />
                 <Checkbox
                     htmlFor="check2"
                     inputId="check2"
                     labelContent="merhaba"
-                    labelClassName=""
                 />
             </div>
             <h5 className="p-5 text-4xl italic border-b">Buttons</h5>
