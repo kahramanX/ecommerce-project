@@ -21,7 +21,7 @@ const Button: React.FC<Props> = ({
     return (
         <button
             className={`${
-                defaultStyles && "button"
+                defaultStyles ? "button" : ""
             } ${colors} ${sizes} ${spacings} ${extraClass}`}
             {...otherProps}
         >
