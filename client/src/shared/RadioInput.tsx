@@ -6,25 +6,24 @@ type Props = {
     labelContent: string;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
-const Checkbox: React.FC<Props> = ({
+const RadioInput: React.FC<Props> = ({
     htmlFor,
     inputId,
-    labelContent = "",
+    labelContent,
     ...otherProps
 }) => {
     return (
         <div className="flex gap-2">
             <input
                 id={inputId}
-                className="checkbox"
-                type="checkbox"
+                name="radio"
+                className="radio"
+                type="radio"
                 {...otherProps}
             />
-            <label htmlFor={htmlFor} className="text-md">
-                {labelContent}
-            </label>
+            <label htmlFor={htmlFor}>{labelContent}</label>
         </div>
     );
 };
 
-export default Checkbox;
+export default RadioInput;
