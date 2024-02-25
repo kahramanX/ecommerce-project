@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ReactHelmet from "components/ReactHelmet";
 import Icon from "shared/Icon";
 import Input from "shared/Input";
+import Checkbox from "shared/Checkbox";
 
 const ComponentShowcase = (): JSX.Element => {
     return (
@@ -28,6 +29,20 @@ const ComponentShowcase = (): JSX.Element => {
                     inputClassName="w-full"
                     iconClassName="absolute top-1/2 transform -translate-x-8 -translate-y-1/2 text-grey3"
                     iconName="search"
+                />
+            </div>
+            <div className="m-10">
+                <Checkbox
+                    htmlFor="check1"
+                    inputId="check1"
+                    labelContent="merhaba"
+                    labelClassName=""
+                />
+                <Checkbox
+                    htmlFor="check2"
+                    inputId="check2"
+                    labelContent="merhaba"
+                    labelClassName=""
                 />
             </div>
             <h5 className="p-5 text-4xl italic border-b">Buttons</h5>
