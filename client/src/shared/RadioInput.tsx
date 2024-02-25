@@ -5,6 +5,7 @@ type Props = {
     inputId: string;
     inputName: string;
     labelContent: string;
+    parentClassName?: string;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
 const RadioInput: React.FC<Props> = ({
@@ -12,10 +13,11 @@ const RadioInput: React.FC<Props> = ({
     inputId,
     inputName,
     labelContent,
+    parentClassName = "",
     ...otherProps
 }) => {
     return (
-        <div className="flex gap-2 ">
+        <div className={`flex gap-2 ${parentClassName}`}>
             <input
                 id={inputId}
                 name={inputName}
