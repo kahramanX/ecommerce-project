@@ -2,6 +2,7 @@ import React from "react";
 
 // Components
 import Text from "shared/Text";
+import Button from "shared/Button";
 
 type Props = {};
 
@@ -30,9 +31,12 @@ const Newsletter = (props: Props) => {
                         className="input text-xs"
                         type="text"
                     />
-                    <button className="button bg-grey1 text-sm py-2">
-                        Submit
-                    </button>
+                    <Button
+                        sizes="text-sm"
+                        colors="bg-grey1"
+                        spacings="py-2"
+                        buttonContent={"Submit"}
+                    />
 
                     <Text
                         ElementTag="div"

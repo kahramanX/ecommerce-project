@@ -2,6 +2,7 @@
 import ReactHelmet from "components/ReactHelmet";
 import Product from "shared/Product";
 import Text from "shared/Text";
+import Button from "shared/Button";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -84,9 +85,13 @@ const HomePage = (): JSX.Element => {
                                                     </>
                                                 }
                                             />
-                                            <button className="button px-4 py-2 bg-grey1 mt-4">
-                                                Shop Collection
-                                            </button>
+                                            <Button
+                                                colors="bg-grey1"
+                                                spacings="px-4 py-2 mt-4"
+                                                buttonContent={
+                                                    <>Shop Collection</>
+                                                }
+                                            />
                                         </div>
                                     </SwiperSlide>
                                 </>
@@ -153,9 +158,12 @@ const HomePage = (): JSX.Element => {
                             extraClass="italic"
                             textContent="On Selected Items"
                         />
-                        <button className="button text-xs lg:text-base bg-grey1 px-2 py-2 lg:px-4">
-                            Shop All
-                        </button>
+                        <Button
+                            sizes="text-xs lg:text-base"
+                            colors="bg-grey1"
+                            spacings="px-2 py-2 lg:px-4"
+                            buttonContent={<>Shop All</>}
+                        />
                     </div>
                 </section>
 

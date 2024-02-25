@@ -1,6 +1,7 @@
 // Components
 import Comments from "components/Comments";
 import Accordion from "shared/Accordion";
+import Button from "shared/Button";
 import Icon from "shared/Icon";
 import Text from "shared/Text";
 
@@ -63,13 +64,22 @@ const ProductContent = (props: Props): JSX.Element => {
                 />
             </div>
             <div className="flex gap-4">
-                <button className="button bg-grey1 text-sm w-full">
-                    Add to shopping bag
-                </button>
+                <Button
+                    sizes="text-sm w-full"
+                    colors="bg-grey1"
+                    buttonContent={<>Add to shopping bag</>}
+                />
 
-                <button className="button bg-grey1 flex items-center p-2">
-                    <Icon name="favorite" />
-                </button>
+                <Button
+                    colors="bg-grey1"
+                    spacings="p-2"
+                    extraClass="flex items-center"
+                    buttonContent={
+                        <>
+                            <Icon name="favorite" />
+                        </>
+                    }
+                />
             </div>
             <div className="">
                 <Accordion headerContent={"REF 438129"} IsOpenOnLoaded={true}>
