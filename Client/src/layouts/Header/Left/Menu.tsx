@@ -32,6 +32,7 @@ const Menu = (props: Props) => {
                 fontSize="text-md"
                 fontColor="text-grey6"
                 fontWeight="font-bold"
+                extraClass="cursor-pointer"
                 textContent="MENU"
                 onClick={openModal}
             />

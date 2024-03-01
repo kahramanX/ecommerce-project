@@ -33,7 +33,7 @@ const ProductContent = (props: Props): JSX.Element => {
                             key={index}
                             className="border border-grey2 bg-grey1 p-1"
                         >
-                            <div className="bg-[#000000] w-full h-7"></div>
+                            <div className="bg-[#000000]  lg:w-full h-7"></div>
                         </div>
                     );
                 })}
