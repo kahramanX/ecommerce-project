@@ -2,9 +2,6 @@ import React from "react";
 
 // Components
 import ReactHelmet from "components/ReactHelmet";
-import Button from "shared/Button";
-import Icon from "shared/Icon";
-import Text from "shared/Text";
 import Top from "./Top";
 import Bottom from "./Bottom";
 import Product from "shared/Product";

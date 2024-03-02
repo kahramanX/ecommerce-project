@@ -1,7 +1,6 @@
 import React from "react";
 
 // Components
-import ReactHelmet from "components/ReactHelmet";
 import Button from "shared/Button";
 import Icon from "shared/Icon";
 import Text from "shared/Text";
