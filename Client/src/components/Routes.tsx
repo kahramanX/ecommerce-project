@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "pages/Home";
 import ProductDetail from "pages/ProductDetail";
 import ProductCategory from "pages/ProductCategory";
+import NotFound from "pages/NotFound";
+import Account from "pages/Account";
 import ComponentShowcase from "pages/ComponentShowcase";
 import ProtectedRoute from "./ProtectedRoute";
 import Header from "layouts/Header";
@@ -14,7 +16,6 @@ import "assets/index.scss";
 
 // Images
 import generalBackgroundImage from "assets/generalBackgroundImage.webp";
-import NotFound from "pages/NotFound";
 
 const router = createBrowserRouter([
     {
@@ -49,6 +50,40 @@ const router = createBrowserRouter([
             </>
         ),
         errorElement: <NotFound />,
+    },
+    {
+        path: "/login",
+        element: (
+            <>
+                <Header />
+                <div>LOGIN</div>
+                <Footer />
+            </>
+        ),
+        errorElement: <NotFound />,
+    },
+    {
+        path: "/register",
+        element: (
+            <>
+                <Header />
+                <div>REGISTER</div>
+                <Footer />
+            </>
+        ),
+        errorElement: <NotFound />,
+    },
+    {
+        path: "/account",
+        element: (
+            <>
+                <Header />
+                <Account />
+                <Footer />
+            </>
+        ),
+        errorElement: <NotFound />,
+        children: [{ path: "address", element: <div>ADDRESS</div> }],
     },
     {
         path: "/all/components",
