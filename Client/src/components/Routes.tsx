@@ -13,6 +13,7 @@ import "assets/index.scss";
 
 // Images
 import generalBackgroundImage from "assets/generalBackgroundImage.webp";
+import NotFound from "pages/NotFound";
 
 const router = createBrowserRouter([
     {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
                 <Footer />
             </>
         ),
-        errorElement: <h1>error</h1>,
+        errorElement: <NotFound />,
     },
     {
         path: "/product/:ProductName",
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
                 <Footer />
             </>
         ),
+        errorElement: <NotFound />,
     },
     {
         path: "/category/:ProductCategory",
@@ -45,10 +47,12 @@ const router = createBrowserRouter([
                 <Footer />
             </>
         ),
+        errorElement: <NotFound />,
     },
     {
         path: "/all/components",
         element: <ComponentShowcase />,
+        errorElement: <NotFound />,
     },
 ]);
 
