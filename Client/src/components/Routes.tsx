@@ -1,11 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-//Components
-import HomePage from "pages/Home";
-import ProductDetail from "pages/ProductDetail";
-import ProductCategory from "pages/ProductCategory";
-import NotFound from "pages/NotFound";
-import Account from "pages/Account";
+// Components
 import ComponentShowcase from "pages/ComponentShowcase";
 import ProtectedRoute from "./ProtectedRoute";
 import Header from "layouts/Header";
@@ -16,6 +11,14 @@ import "assets/index.scss";
 
 // Images
 import generalBackgroundImage from "assets/generalBackgroundImage.webp";
+
+// Pages
+import HomePage from "pages/Home";
+import ProductDetail from "pages/ProductDetail";
+import ProductCategory from "pages/ProductCategory";
+import NotFound from "pages/NotFound";
+import Account from "pages/Account";
+import LoginRegister from "pages/LoginRegister";
 
 const router = createBrowserRouter([
     {
@@ -56,7 +59,7 @@ const router = createBrowserRouter([
         element: (
             <>
                 <Header />
-                <div>LOGIN</div>
+                <LoginRegister />
                 <Footer />
             </>
         ),
@@ -67,7 +70,7 @@ const router = createBrowserRouter([
         element: (
             <>
                 <Header />
-                <div>REGISTER</div>
+                <LoginRegister />
                 <Footer />
             </>
         ),
