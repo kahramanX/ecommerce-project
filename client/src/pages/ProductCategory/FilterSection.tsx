@@ -33,16 +33,6 @@ const FilterSection: React.FC<Props> = ({ setFilterJustifications }) => {
                 <AttributeBox />
                 <AttributeBox />
                 <AttributeBox />
-                <AttributeBox />
-                <AttributeBox />
-                <AttributeBox />
-                <AttributeBox />
-                <AttributeBox />
-                <AttributeBox />
-                <AttributeBox />
-                <AttributeBox />
-                <AttributeBox />
-                <AttributeBox />
             </div>
         </div>
     );
