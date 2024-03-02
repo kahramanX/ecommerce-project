@@ -5,6 +5,7 @@ import ReactHelmet from "components/ReactHelmet";
 import Top from "./Top";
 import Bottom from "./Bottom";
 import Product from "shared/Product";
+import FilterSection from "./FilterSection";
 
 type Props = {};
 
@@ -21,8 +22,6 @@ const ProductCategory: React.FC<Props> = () => {
             <main className="p-2 lg:px-10 ">
                 <Top setFilterJustifications={setFilterJustifications} />
                 <div
-                    className={`grid lg:${
-                        filterJustifications ? "grid-cols-3_2-1" : "grid-cols-1"
                     className={`grid ${
                         filterJustifications
                             ? "lg:grid-cols-3_2-1"
@@ -41,9 +40,7 @@ const ProductCategory: React.FC<Props> = () => {
                         ))}
                     </div>
 
-                    {filterJustifications && (
-                        <div className="border-2 p-5 "></div>
-                    )}
+                    {filterJustifications && <FilterSection />}
                 </div>
                 <Bottom />
             </main>
