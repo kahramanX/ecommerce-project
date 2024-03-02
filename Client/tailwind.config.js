@@ -17,6 +17,7 @@ export default {
             },
             gridTemplateColumns: {
                 "1-2-1": "1fr 2fr 1fr",
+                "1-2_1-1": "1fr 2.1fr 1fr",
                 "1-3-1": "1fr 3fr 1fr",
                 "1-4-1": "1fr 4fr 1fr",
                 "1-5-1": "1fr 5fr 1fr",
