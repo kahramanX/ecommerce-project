@@ -5,7 +5,7 @@ import ProductContent from "./ProductContent";
 
 type Props = {};
 
-const ProductDetail = (props: Props): JSX.Element => {
+const ProductDetail: React.FC<Props> = () => {
     return (
         <>
             <ReactHelmet

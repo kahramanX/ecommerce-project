@@ -17,7 +17,7 @@ const HomePage = (): JSX.Element => {
         <>
             <ReactHelmet titleName="Home" description="Home Page" />
             <main className="px-2 md:px-4 lg:px-10">
-                <section className="gap-8 grid grid-cols-1 lg:grid-cols-1-2-1">
+                <section className="gap-8 grid grid-cols-1 lg:grid-cols-1-2_1-1">
                     <div className="layered-box-shadow hidden lg:block lg:max-h-[40rem] bg-blue">
                         <img
                             src={"https://placehold.co/400"}

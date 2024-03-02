@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //Components
 import HomePage from "pages/Home";
 import ProductDetail from "pages/ProductDetail";
+import ProductCategory from "pages/ProductCategory";
 import ComponentShowcase from "pages/ComponentShowcase";
 import Header from "layouts/Header";
 import Footer from "layouts/Footer";
@@ -31,6 +32,16 @@ const router = createBrowserRouter([
             <>
                 <Header />
                 <ProductDetail />
+                <Footer />
+            </>
+        ),
+    },
+    {
+        path: "/category/:ProductCategory",
+        element: (
+            <>
+                <Header />
+                <ProductCategory />
                 <Footer />
             </>
         ),

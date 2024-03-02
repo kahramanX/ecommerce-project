@@ -30,6 +30,10 @@
     @apply layered-box-shadow hover:bg-grey6 hover:text-grey1 border-grey6 border font-bold;
 }
 
+.button-activated {
+    @apply bg-grey6 text-grey1 shadow-reset;
+}
+
 // Box and button border effect
 .layered-box-shadow {
     @apply shadow-boxDefault border border-grey6 hover:shadow-reset transition-shadow;
