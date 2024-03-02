@@ -1,9 +1,22 @@
 import React from "react";
 
+// Components
+import Text from "shared/Text";
+
 type Props = {};
 
 const ShoppingBag = (props: Props) => {
-    return <div className="font-bold">SHOPPING BAG (0)</div>;
+    return (
+        <>
+            <Text
+                ElementTag="div"
+                fontSize="text-md"
+                fontColor="text-grey6"
+                fontWeight="font-bold"
+                textContent="SHOPPING BAG (0)"
+            />
+        </>
+    );
 };
 
 export default ShoppingBag;

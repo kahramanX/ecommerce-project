@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+// Components
+import Icon from "shared/Icon";
+import Text from "shared/Text";
+
 type Props = {
     children: React.ReactNode;
     headerContent: string;
@@ -21,16 +25,18 @@ const Accordion = ({
                     setIsActive(!isActive);
                 }}
             >
-                <div className="text-xl font-bold">{headerContent}</div>
+                <Text
+                    ElementTag="div"
+                    fontSize="text-xl"
+                    fontColor="text-grey6"
+                    fontWeight="font-bold"
+                    textContent={<>{headerContent}</>}
+                />
                 <div>
-                    {isActive ? (
-                        <i className="material-symbols-sharp">remove</i>
-                    ) : (
-                        <i className="material-symbols-sharp">add</i>
-                    )}
+                    {isActive ? <Icon name="remove" /> : <Icon name="add" />}
                 </div>
             </div>
-            {isActive && <div className="font-semibold mt-2">{children}</div>}
+            {isActive && <div className="mt-2">{children}</div>}
         </div>
     );
 };

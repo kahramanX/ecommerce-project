@@ -1,6 +1,11 @@
+import { Link } from "react-router-dom";
+
 // Components
 import ReactHelmet from "components/ReactHelmet";
-import { Link } from "react-router-dom";
+import Icon from "shared/Icon";
+import Input from "shared/Input";
+import Checkbox from "shared/Checkbox";
+import RadioInput from "shared/RadioInput";
 
 const ComponentShowcase = (): JSX.Element => {
     return (
@@ -16,6 +21,40 @@ const ComponentShowcase = (): JSX.Element => {
                 <button className="button px-4 py-2">
                     <Link to={"/"}>Go To HomePage</Link>
                 </button>
+            </div>
+            <div className="m-10">
+                <Input
+                    type="text"
+                    placeholder="TEST TEST TEST"
+                    parentClassName="relative w-fit"
+                    inputClassName="w-full"
+                    iconClassName="absolute top-1/2 transform -translate-x-8 -translate-y-1/2 text-grey3"
+                    iconName="search"
+                />
+            </div>
+            <div className="m-10">
+                <Checkbox
+                    htmlFor="check1"
+                    inputId="check1"
+                    labelContent="merhaba"
+                />
+                <Checkbox
+                    htmlFor="check2"
+                    inputId="check2"
+                    labelContent="merhaba"
+                />
+                <RadioInput
+                    htmlFor="radio1"
+                    inputId="radio1"
+                    inputName="yoo"
+                    labelContent="radiooooo noo"
+                />
+                <RadioInput
+                    htmlFor="radio2"
+                    inputId="radio2"
+                    inputName="yoo"
+                    labelContent="radiooooo noo"
+                />
             </div>
             <h5 className="p-5 text-4xl italic border-b">Buttons</h5>
             <div className="p-10">
@@ -39,7 +78,7 @@ const ComponentShowcase = (): JSX.Element => {
                 </div>
                 <div className="mb-5">
                     <button className="button text-sm flex p-2">
-                        <i className="material-symbols-sharp">close</i>
+                        <Icon name="close" />
                     </button>
                 </div>
                 <div className="mb-5">

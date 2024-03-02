@@ -1,6 +1,8 @@
 // Components
 import ReactHelmet from "components/ReactHelmet";
 import Product from "shared/Product";
+import Text from "shared/Text";
+import Button from "shared/Button";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -43,26 +45,53 @@ const HomePage = (): JSX.Element => {
                                         </div>
 
                                         <div className="absolute bottom-0 left-0 m-5 lg:m-10">
-                                            <div className="text-grey1 text-5xl lg:text-6xl font-bold mb-5 text-shadow-black">
-                                                GROWING IN
-                                                <br />
-                                                THE DARK
-                                            </div>
-                                            <div className="text-grey6 text-sm lg:text-xl font-bold text-shadow-white">
-                                                NIGHT FALLS AND THE CITY GETS
-                                                DARKER.
-                                            </div>
-                                            <div className="text-grey6 text-sm lg:text-xl font-bold text-shadow-white">
-                                                NIGHT FALLS AND THE CITY GETS
-                                                DARKER.
-                                            </div>
-                                            <div className="text-grey6 text-sm lg:text-xl font-bold text-shadow-white">
-                                                NIGHT FALLS AND THE CITY GETS
-                                                DARKER.
-                                            </div>
-                                            <button className="button px-4 py-2 bg-grey1 mt-4">
-                                                Shop Collection
-                                            </button>
+                                            <Text
+                                                ElementTag="div"
+                                                fontSize="text-5xl lg:text-6xl"
+                                                fontColor="text-grey1"
+                                                fontWeight="font-bold"
+                                                extraClass="mb-5 text-shadow-black"
+                                                textContent={
+                                                    <>
+                                                        GROWING IN
+                                                        <br />
+                                                        THE DARK
+                                                    </>
+                                                }
+                                            />
+                                            <Text
+                                                ElementTag="div"
+                                                fontSize="text-sm lg:text-xl"
+                                                fontColor="text-grey6"
+                                                fontWeight="font-bold"
+                                                extraClass="text-shadow-white"
+                                                textContent={
+                                                    <>
+                                                        NIGHT FALLS AND THE CITY
+                                                        GETS DARKER.
+                                                    </>
+                                                }
+                                            />
+                                            <Text
+                                                ElementTag="div"
+                                                fontSize="text-sm lg:text-xl"
+                                                fontColor="text-grey6"
+                                                fontWeight="font-bold"
+                                                extraClass="text-shadow-white"
+                                                textContent={
+                                                    <>
+                                                        NIGHT FALLS AND THE CITY
+                                                        GETS DARKER.
+                                                    </>
+                                                }
+                                            />
+                                            <Button
+                                                colors="bg-grey1"
+                                                spacings="px-4 py-2 mt-4"
+                                                buttonContent={
+                                                    <>Shop Collection</>
+                                                }
+                                            />
                                         </div>
                                     </SwiperSlide>
                                 </>
@@ -107,16 +136,34 @@ const HomePage = (): JSX.Element => {
 
                 <section className="lg:my-60">
                     <div className="layered-box-shadow bg-green flex flex-col items-center py-4 lg:py-8 gap-4">
-                        <div className="text-2xl lg:text-3xl font-bold">
-                            PROMOTIONS
-                        </div>
-                        <div className="text-4xl lg:text-6xl font-bold">
-                            UP TO -40%
-                        </div>
-                        <div className="italic">On Selected Items</div>
-                        <button className="button text-xs lg:text-base bg-grey1 px-2 py-2 lg:px-4">
-                            Shop All
-                        </button>
+                        <Text
+                            ElementTag="div"
+                            fontSize="text-2xl lg:text-3xl"
+                            fontColor="text-grey6"
+                            fontWeight="font-bold"
+                            textContent="PROMOTIONS"
+                        />
+                        <Text
+                            ElementTag="div"
+                            fontSize="text-4xl lg:text-6xl"
+                            fontColor="text-grey6"
+                            fontWeight="font-bold"
+                            textContent="UP TO -40%"
+                        />
+                        <Text
+                            ElementTag="div"
+                            fontSize="text-base"
+                            fontColor="text-grey6"
+                            fontWeight="font-normal"
+                            extraClass="italic"
+                            textContent="On Selected Items"
+                        />
+                        <Button
+                            sizes="text-xs lg:text-base"
+                            colors="bg-grey1"
+                            spacings="px-2 py-2 lg:px-4"
+                            buttonContent={<>Shop All</>}
+                        />
                     </div>
                 </section>
 

@@ -16,7 +16,7 @@ const ReactHelmet = ({
             <link rel="icon" type="image/png" href="/images/favicon.png" />
             <meta
                 name="viewport"
-                content="width=device-width, initial-scale=1.0"
+                content="width=device-width, height=device-height initial-scale=1.0,user-scalable=no;user-scalable=0;"
             />
             <meta charSet="utf-8" />
             <meta name="robots" content={noindex} />
