@@ -2,6 +2,7 @@
 const plugin = require("tailwindcss/plugin");
 
 export default {
+    mode: "all",
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
         extend: {
@@ -23,7 +24,7 @@ export default {
                 "1-5-1": "1fr 5fr 1fr",
                 "1-6-1": "1fr 6fr 1fr",
                 "3_2-1": "3.2fr 1fr",
-                "3-1": "3.2fr 1fr",
+                "1-1": "1fr 1fr",
             },
         },
         fontFamily: {

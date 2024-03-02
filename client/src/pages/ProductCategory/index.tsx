@@ -23,11 +23,17 @@ const ProductCategory: React.FC<Props> = () => {
                 <div
                     className={`grid lg:${
                         filterJustifications ? "grid-cols-3_2-1" : "grid-cols-1"
+                    className={`grid ${
+                        filterJustifications
+                            ? "lg:grid-cols-3_2-1"
+                            : "lg:grid-cols-1"
                     }  gap-8 my-5`}
                 >
                     <div
-                        className={`grid gap-4 lg:gap-8 grid-cols-2 lg:${
-                            filterJustifications ? "grid-cols-3" : "grid-cols-4"
+                        className={`grid gap-4 lg:gap-8 grid-cols-2 ${
+                            filterJustifications
+                                ? "lg:grid-cols-3"
+                                : "lg:grid-cols-4"
                         }`}
                     >
                         {Array.from({ length: 8 }).map(() => (
