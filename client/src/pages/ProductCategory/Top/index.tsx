@@ -5,9 +5,11 @@ import Button from "shared/Button";
 import Icon from "shared/Icon";
 import Text from "shared/Text";
 
-type Props = {};
+type Props = {
+    setFilterJustifications: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-const Top: React.FC<Props> = () => {
+const Top: React.FC<Props> = ({ setFilterJustifications }) => {
     return (
         <div className="grid gap-4 lg:gap-8 grid-cols-1-6-1 lg:grid-cols-1-2_1-1">
             <Button
@@ -63,6 +65,9 @@ const Top: React.FC<Props> = () => {
                             <Icon name="tune" extraClass="lg:hidden text-xs" />
                         </>
                     }
+                    onClick={() => {
+                        setFilterJustifications((current) => !current);
+                    }}
                 />
             </div>
         </div>

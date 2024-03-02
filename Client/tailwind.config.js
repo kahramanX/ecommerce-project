@@ -22,6 +22,8 @@ export default {
                 "1-4-1": "1fr 4fr 1fr",
                 "1-5-1": "1fr 5fr 1fr",
                 "1-6-1": "1fr 6fr 1fr",
+                "3_2-1": "3.2fr 1fr",
+                "3-1": "3.2fr 1fr",
             },
         },
         fontFamily: {
