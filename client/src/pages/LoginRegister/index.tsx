@@ -26,7 +26,7 @@ const LoginRegister = (props: Props) => {
                         selectedTabClassName="border-b-2 focus:outline-none"
                     >
                         <TabList className="flex justify-center items-center gap-8 mb-10 border-b border-b-grey3">
-                            <Tab>
+                            <Tab className="cursor-pointer">
                                 <Text
                                     ElementTag="div"
                                     fontSize="text-2xl lg:text-4xl text-center"
@@ -36,7 +36,7 @@ const LoginRegister = (props: Props) => {
                                     textContent="Login"
                                 />
                             </Tab>
-                            <Tab>
+                            <Tab className="cursor-pointer">
                                 <Text
                                     ElementTag="div"
                                     fontSize="text-2xl lg:text-4xl text-center"
