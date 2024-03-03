@@ -6,9 +6,6 @@ import ProtectedRoute from "./ProtectedRoute";
 import Header from "layouts/Header";
 import Footer from "layouts/Footer";
 
-// Styles
-import "assets/index.scss";
-
 // Images
 import generalBackgroundImage from "assets/generalBackgroundImage.webp";
 
@@ -59,7 +56,9 @@ const router = createBrowserRouter([
         element: (
             <>
                 <Header />
-                <LoginRegister />
+                <ProtectedRoute>
+                    <LoginRegister />
+                </ProtectedRoute>
                 <Footer />
             </>
         ),
@@ -70,7 +69,9 @@ const router = createBrowserRouter([
         element: (
             <>
                 <Header />
-                <LoginRegister />
+                <ProtectedRoute>
+                    <LoginRegister />
+                </ProtectedRoute>
                 <Footer />
             </>
         ),
@@ -78,15 +79,25 @@ const router = createBrowserRouter([
     },
     {
         path: "/account",
-        element: (
-            <>
-                <Header />
-                <Account />
-                <Footer />
-            </>
-        ),
         errorElement: <NotFound />,
-        children: [{ path: "address", element: <div>ADDRESS</div> }],
+        children: [
+            {
+                path: "profile",
+                element: (
+                    <ProtectedRoute>
+                        <div>PROFILE</div>
+                    </ProtectedRoute>
+                ),
+            },
+            {
+                path: "address",
+                element: (
+                    <ProtectedRoute>
+                        <div>ADDRESS</div>
+                    </ProtectedRoute>
+                ),
+            },
+        ],
     },
     {
         path: "/all/components",

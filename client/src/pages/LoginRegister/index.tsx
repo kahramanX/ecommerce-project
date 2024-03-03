@@ -3,8 +3,6 @@ import React from "react";
 // Components
 import ReactHelmet from "components/ReactHelmet";
 import Text from "shared/Text";
-import Input from "shared/Input";
-import Button from "shared/Button";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Login from "./Login";
 import Register from "./Register";

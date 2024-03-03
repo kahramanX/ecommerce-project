@@ -6,6 +6,9 @@ import { HelmetProvider } from "react-helmet-async";
 import Routes from "components/Routes";
 import Modal from "react-modal";
 
+// Styles
+import "assets/index.scss";
+
 Modal.setAppElement("#SMYRNA");
 
 ReactDOM.createRoot(document.getElementById("SMYRNA")! as HTMLElement).render(
