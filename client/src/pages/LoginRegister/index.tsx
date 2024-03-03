@@ -5,6 +5,9 @@ import ReactHelmet from "components/ReactHelmet";
 import Text from "shared/Text";
 import Input from "shared/Input";
 import Button from "shared/Button";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import Login from "./Login";
+import Register from "./Register";
 
 type Props = {};
 
@@ -17,36 +20,41 @@ const LoginRegister = (props: Props) => {
             />
 
             <main className="px-2 md:px-4 lg:px-10 my-10">
-                <Text
-                    ElementTag="div"
-                    fontSize="text-4xl text-center"
-                    fontColor="text-grey6"
-                    fontWeight="font-bold"
-                    extraClass="mb-10"
-                    textContent="REGISTER"
-                />
                 <div className="grid gap-8 grid-cols-1 lg:grid-cols-1-2_1-1">
-                    <div className="lg:col-start-2">
-                        <Input
-                            type={"text"}
-                            placeholder={"E-mail"}
-                            parentClassName="mb-4 w-full"
-                            inputClassName="w-full"
-                        />
-                        <Input
-                            type={"text"}
-                            placeholder={"Password"}
-                            parentClassName="mb-4"
-                            inputClassName="w-full"
-                        />
+                    <Tabs
+                        className="lg:col-start-2"
+                        selectedTabClassName="border-b-2 focus:outline-none"
+                    >
+                        <TabList className="flex justify-center items-center gap-8 mb-10 border-b border-b-grey3">
+                            <Tab>
+                                <Text
+                                    ElementTag="div"
+                                    fontSize="text-2xl lg:text-4xl text-center"
+                                    fontColor="text-grey6"
+                                    fontWeight="font-medium"
+                                    extraClass="mb-2"
+                                    textContent="Login"
+                                />
+                            </Tab>
+                            <Tab>
+                                <Text
+                                    ElementTag="div"
+                                    fontSize="text-2xl lg:text-4xl text-center"
+                                    fontColor="text-grey6"
+                                    fontWeight="font-medium"
+                                    extraClass="mb-2"
+                                    textContent="Register"
+                                />
+                            </Tab>
+                        </TabList>
 
-                        <Button
-                            colors="bg-grey1"
-                            spacings="p-2"
-                            sizes="w-full"
-                            buttonContent={"Submit"}
-                        />
-                    </div>
+                        <TabPanel>
+                            <Login />
+                        </TabPanel>
+                        <TabPanel>
+                            <Register />
+                        </TabPanel>
+                    </Tabs>
                 </div>
             </main>
         </>
