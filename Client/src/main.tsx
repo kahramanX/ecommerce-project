@@ -6,7 +6,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Routes from "components/Routes";
 import Modal from "react-modal";
 
-// Styles
+// Tailwind Styles
 import "assets/index.scss";
 
 Modal.setAppElement("#SMYRNA");

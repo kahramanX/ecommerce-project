@@ -9,7 +9,7 @@ import Register from "./Register";
 
 type Props = {};
 
-const LoginRegister = (props: Props) => {
+const LoginRegister: React.FC<Props> = () => {
     return (
         <>
             <ReactHelmet

@@ -79,25 +79,16 @@ const router = createBrowserRouter([
     },
     {
         path: "/account",
+        element: (
+            <>
+                <Header />
+                <ProtectedRoute>
+                    <Account />
+                </ProtectedRoute>
+                <Footer />
+            </>
+        ),
         errorElement: <NotFound />,
-        children: [
-            {
-                path: "profile",
-                element: (
-                    <ProtectedRoute>
-                        <div>PROFILE</div>
-                    </ProtectedRoute>
-                ),
-            },
-            {
-                path: "address",
-                element: (
-                    <ProtectedRoute>
-                        <div>ADDRESS</div>
-                    </ProtectedRoute>
-                ),
-            },
-        ],
     },
     {
         path: "/all/components",
