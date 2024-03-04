@@ -63,3 +63,8 @@
 .select-input {
     @apply layered-input-shadow px-2 py-2 text-grey5 placeholder:text-grey2 font-bold;
 }
+
+// Text Styles
+.text-activated {
+    @apply bg-grey6 text-grey1;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 
 type Props = {
-    textContent: string | JSX.Element;
+    textContent: string | JSX.Element | undefined;
     fontSize: string;
     fontWeight: string;
     fontColor: string;

@@ -8,7 +8,7 @@ type Props = {};
 
 const Newsletter = (props: Props) => {
     return (
-        <section className="px-2 lg:px-10 lg:my-60">
+        <section className="px-2 lg:px-10 mt-20 lg:my-60">
             <div className="layered-box-shadow bg-blue flex flex-col items-center text-center p-4 lg:p-8 gap-4">
                 <Text
                     ElementTag="div"

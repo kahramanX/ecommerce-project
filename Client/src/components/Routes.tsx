@@ -1,18 +1,21 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-//Components
-import HomePage from "pages/Home";
-import ProductDetail from "pages/ProductDetail";
-import ProductCategory from "pages/ProductCategory";
+// Components
 import ComponentShowcase from "pages/ComponentShowcase";
+import ProtectedRoute from "./ProtectedRoute";
 import Header from "layouts/Header";
 import Footer from "layouts/Footer";
 
-// Styles
-import "assets/index.scss";
-
 // Images
 import generalBackgroundImage from "assets/generalBackgroundImage.webp";
+
+// Pages
+import HomePage from "pages/Home";
+import ProductDetail from "pages/ProductDetail";
+import ProductCategory from "pages/ProductCategory";
+import NotFound from "pages/NotFound";
+import Account from "pages/Account";
+import LoginRegister from "pages/LoginRegister";
 
 const router = createBrowserRouter([
     {
@@ -24,7 +27,7 @@ const router = createBrowserRouter([
                 <Footer />
             </>
         ),
-        errorElement: <h1>error</h1>,
+        errorElement: <NotFound />,
     },
     {
         path: "/product/:ProductName",
@@ -35,6 +38,7 @@ const router = createBrowserRouter([
                 <Footer />
             </>
         ),
+        errorElement: <NotFound />,
     },
     {
         path: "/category/:ProductCategory",
@@ -45,10 +49,51 @@ const router = createBrowserRouter([
                 <Footer />
             </>
         ),
+        errorElement: <NotFound />,
+    },
+    {
+        path: "/login",
+        element: (
+            <>
+                <Header />
+                <ProtectedRoute>
+                    <LoginRegister />
+                </ProtectedRoute>
+                <Footer />
+            </>
+        ),
+        errorElement: <NotFound />,
+    },
+    {
+        path: "/register",
+        element: (
+            <>
+                <Header />
+                <ProtectedRoute>
+                    <LoginRegister />
+                </ProtectedRoute>
+                <Footer />
+            </>
+        ),
+        errorElement: <NotFound />,
+    },
+    {
+        path: "/account",
+        element: (
+            <>
+                <Header />
+                <ProtectedRoute>
+                    <Account />
+                </ProtectedRoute>
+                <Footer />
+            </>
+        ),
+        errorElement: <NotFound />,
     },
     {
         path: "/all/components",
         element: <ComponentShowcase />,
+        errorElement: <NotFound />,
     },
 ]);
 

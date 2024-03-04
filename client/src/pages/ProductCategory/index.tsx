@@ -40,7 +40,11 @@ const ProductCategory: React.FC<Props> = () => {
                         ))}
                     </div>
 
-                    {filterJustifications && <FilterSection />}
+                    {filterJustifications && (
+                        <FilterSection
+                            setFilterJustifications={setFilterJustifications}
+                        />
+                    )}
                 </div>
                 <Bottom />
             </main>
