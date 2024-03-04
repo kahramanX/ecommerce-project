@@ -11,6 +11,7 @@ import Text from "shared/Text";
 // Swiper Components
 import { Swiper, SwiperSlide, SwiperClass } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import AccountTitle from "./AccountTitle";
 
 type Props = {};
 
@@ -21,11 +22,16 @@ const Account: React.FC<Props> = () => {
             <ReactHelmet titleName="Account" description="Account Page" />
 
             <main className="px-2 md:px-4 lg:px-10">
+                <AccountTitle tabIndex={selectedTabIndex} />
+
                 <Tabs
                     selectedTabClassName=""
                     selectedTabPanelClassName="border h-full"
                     className="grid gap-8 grid-cols-1 lg:grid-cols-1-2_1-1"
-                    onSelect={(selected) => setSelectedTabIndex(selected)}
+                    onSelect={(selected) => {
+                        setSelectedTabIndex(selected);
+                        console.log(selected);
+                    }}
                 >
                     <TabList
                         className={
@@ -274,7 +280,7 @@ const Account: React.FC<Props> = () => {
                             />
                         </Tab>
                     </TabList>
-                    <div>
+                    <div className="">
                         <TabPanel>
                             <Profile />
                         </TabPanel>
