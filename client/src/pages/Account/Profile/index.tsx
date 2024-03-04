@@ -9,7 +9,7 @@ type Props = {};
 const Profile: React.FC<Props> = () => {
     return (
         <>
-            <div className="p-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="p-2 lg:p-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <Input
                     type={"text"}
                     placeholder={"Name"}
@@ -50,7 +50,7 @@ const Profile: React.FC<Props> = () => {
                     sizes="w-full"
                     colors="bg-grey1"
                     spacings="py-2"
-                    extraClass="col-span-2"
+                    extraClass="lg:col-span-2"
                     buttonContent="Update Infos"
                 />
             </div>
