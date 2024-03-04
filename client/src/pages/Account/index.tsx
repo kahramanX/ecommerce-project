@@ -26,7 +26,7 @@ const Account: React.FC<Props> = () => {
 
                 <Tabs
                     selectedTabClassName=""
-                    selectedTabPanelClassName="border h-full"
+                    selectedTabPanelClassName="layered-box-shadow h-full"
                     className="grid gap-8 grid-cols-1 lg:grid-cols-1-2_1-1"
                     onSelect={(selected) => {
                         setSelectedTabIndex(selected);
@@ -35,7 +35,7 @@ const Account: React.FC<Props> = () => {
                 >
                     <TabList
                         className={
-                            "flex gap-4 justify-center items-baseline overflow-x-auto lg:block text-nowrap"
+                            "flex gap-4 justify-center items-baseline overflow-x-auto lg:block text-nowrap lg:p-1"
                         }
                     >
                         {/*
