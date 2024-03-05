@@ -12,6 +12,7 @@ import Text from "shared/Text";
 import { Swiper, SwiperSlide, SwiperClass } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import AccountTitle from "./AccountTitle";
+import UpdatePassword from "./UpdatePassword";
 
 type Props = {};
 
@@ -303,7 +304,7 @@ const Account: React.FC<Props> = () => {
                             <div>MESSAGES</div>
                         </TabPanel>
                         <TabPanel>
-                            <div>UPDATE PASSWORD</div>
+                            <UpdatePassword />
                         </TabPanel>
                     </div>
                 </Tabs>
