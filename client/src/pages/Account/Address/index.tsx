@@ -9,11 +9,11 @@ import AddAddress from "./AddAddress";
 type Props = {};
 
 const Address: React.FC<Props> = () => {
-    const [showAddressForm, setShowAddressForm] = useState<boolean>(true);
+    const [showAddressForm, setShowAddressForm] = useState<boolean>(false);
     return (
         <>
             {showAddressForm ? (
-                <AddAddress />
+                <AddAddress setShowAddressForm={setShowAddressForm} />
             ) : (
                 <AddressList setShowAddressForm={setShowAddressForm} />
             )}
