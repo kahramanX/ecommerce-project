@@ -7,12 +7,15 @@ import Profile from "./Profile";
 import Address from "./Address";
 import Orders from "./Orders";
 import Text from "shared/Text";
+import AccountTitle from "./AccountTitle";
 
 // Swiper Components
 import { Swiper, SwiperSlide, SwiperClass } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import AccountTitle from "./AccountTitle";
+
+// Tabs
 import UpdatePassword from "./UpdatePassword";
+import Message from "./Message";
 
 type Props = {};
 
@@ -300,7 +303,7 @@ const Account: React.FC<Props> = () => {
                             <div>FOLLOWS</div>
                         </TabPanel>
                         <TabPanel>
-                            <div>MESSAGES</div>
+                            <Message />
                         </TabPanel>
                         <TabPanel>
                             <UpdatePassword />
