@@ -3,6 +3,7 @@ import React from "react";
 // Components
 import Input from "shared/Input";
 import Button from "shared/Button";
+import TextArea from "shared/TextArea";
 
 type Props = {
     setShowAddressForm: React.Dispatch<React.SetStateAction<boolean>>;
@@ -59,11 +60,10 @@ const AddAddress: React.FC<Props> = ({ setShowAddressForm }) => {
                 parentClassName="w-full"
                 inputClassName="w-full"
             />
-            <Input
-                type={"text"}
-                placeholder={"Address Detail"}
+            <TextArea
                 parentClassName="w-full lg:col-span-2"
-                inputClassName="w-full h-40"
+                textAreaClassName="w-full"
+                placeholder="Addres Detail"
             />
             <div></div>
             <div className="flex lg:col-span-2 gap-4">
