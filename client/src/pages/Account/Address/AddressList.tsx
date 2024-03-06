@@ -34,7 +34,7 @@ const AddressList: React.FC<Props> = ({ setAddressViewType }) => {
                         <>
                             <AddressItem
                                 onAddressUpdate={() => {
-                                    setAddressViewType("address_edit");
+                                    setAddressViewType("address_update");
                                 }}
                             />
                         </>

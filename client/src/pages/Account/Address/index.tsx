@@ -20,7 +20,7 @@ const Address: React.FC<Props> = () => {
                 return <AddressList setAddressViewType={setAddressViewType} />;
             case "address_add":
                 return <AddAddress setAddressViewType={setAddressViewType} />;
-            case "address_edit":
+            case "address_update":
                 return (
                     <UpdateAddress setAddressViewType={setAddressViewType} />
                 );

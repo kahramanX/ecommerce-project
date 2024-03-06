@@ -1,1 +1,4 @@
-export type AddressViewTypes = "address_list" | "address_edit" | "address_add";
+export type AddressViewTypes =
+    | "address_list"
+    | "address_update"
+    | "address_add";
