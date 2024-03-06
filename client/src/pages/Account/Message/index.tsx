@@ -8,6 +8,7 @@ import MessageList from "./MessageList";
 // Types
 import { MessageViewTypes } from "../types";
 import AddMessage from "./AddMessage";
+import MessageDetail from "./MessageDetail";
 
 const Message: React.FC<Props> = () => {
     const [messageViewType, setMessageViewType] =
@@ -20,7 +21,9 @@ const Message: React.FC<Props> = () => {
             case "message_add":
                 return <AddMessage setMessageViewType={setMessageViewType} />;
             case "message_detail":
-                return <div>DETAIL PAGE</div>;
+                return (
+                    <MessageDetail setMessageViewType={setMessageViewType} />
+                );
             default:
                 break;
         }
