@@ -39,7 +39,7 @@ const MessageDetail: React.FC<Props> = ({ setMessageViewType }) => {
                     Content Detail Content Detail Content Detail Content Detail
                 </div>
             </div>
-            <div className="p-2 flex flex-col">
+            <div className="flex flex-col mb-8">
                 <div className="flex justify-start">
                     <div className="border mb-4 p-2 lg:w-1/2 bg-violet">
                         <div className="flex items-center mb-2">
@@ -86,8 +86,24 @@ const MessageDetail: React.FC<Props> = ({ setMessageViewType }) => {
                         <div className="text-md">
                             Merhaba, ben müşteri hizmetleri
                         </div>
-                    </div>{" "}
+                    </div>
                 </div>
+            </div>
+
+            <div>
+                <TextArea
+                    parentClassName="w-full lg:col-span-2 mb-2"
+                    textAreaClassName="w-full"
+                    placeholder="Write Message"
+                />
+
+                <Button
+                    sizes="w-full"
+                    colors="bg-grey1"
+                    spacings="py-2"
+                    extraClass="lg:col-span-1"
+                    buttonContent="Send Message"
+                />
             </div>
         </div>
     );
