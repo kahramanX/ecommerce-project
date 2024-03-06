@@ -5,11 +5,14 @@ import Input from "shared/Input";
 import Button from "shared/Button";
 import TextArea from "shared/TextArea";
 
+// Types
+import { AddressViewTypes } from "../types";
+
 type Props = {
-    setShowAddressForm: React.Dispatch<React.SetStateAction<boolean>>;
+    setAddressViewType: React.Dispatch<React.SetStateAction<AddressViewTypes>>;
 };
 
-const AddAddress: React.FC<Props> = ({ setShowAddressForm }) => {
+const AddAddress: React.FC<Props> = ({ setAddressViewType }) => {
     return (
         <div className="p-2 lg:p-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
             <Input
@@ -80,7 +83,7 @@ const AddAddress: React.FC<Props> = ({ setShowAddressForm }) => {
                     spacings="py-2"
                     extraClass="lg:col-span-1"
                     buttonContent="Cancel"
-                    onClick={() => setShowAddressForm(false)}
+                    onClick={() => setAddressViewType("address_list")}
                 />
             </div>
         </div>

@@ -5,11 +5,14 @@ import Button from "shared/Button";
 import Icon from "shared/Icon";
 import AddressItem from "shared/AddressItem";
 
+// Types
+import { AddressViewTypes } from "../types";
+
 type Props = {
-    setShowAddressForm: React.Dispatch<React.SetStateAction<boolean>>;
+    setAddressViewType: React.Dispatch<React.SetStateAction<AddressViewTypes>>;
 };
 
-const AddressList: React.FC<Props> = ({ setShowAddressForm }) => {
+const AddressList: React.FC<Props> = ({ setAddressViewType }) => {
     return (
         <>
             <div className="grid grid-cols-1 p-2 lg:p-4">
@@ -24,7 +27,7 @@ const AddressList: React.FC<Props> = ({ setShowAddressForm }) => {
                             Add Address
                         </>
                     }
-                    onClick={() => setShowAddressForm(true)}
+                    onClick={() => setAddressViewType("address_add")}
                 />
                 {Array.from({ length: 10 }).map(() => {
                     return (

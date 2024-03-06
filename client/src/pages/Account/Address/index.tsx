@@ -1,24 +1,30 @@
 import React, { useState } from "react";
 
 // Components
-import Button from "shared/Button";
-import Icon from "shared/Icon";
 import AddressList from "./AddressList";
 import AddAddress from "./AddAddress";
+
+// Types
+import { AddressViewTypes } from "../types";
 
 type Props = {};
 
 const Address: React.FC<Props> = () => {
-    const [showAddressForm, setShowAddressForm] = useState<boolean>(false);
-    return (
-        <>
-            {showAddressForm ? (
-                <AddAddress setShowAddressForm={setShowAddressForm} />
-            ) : (
-                <AddressList setShowAddressForm={setShowAddressForm} />
-            )}
-        </>
-    );
+    const [addressViewType, setAddressViewType] =
+        useState<AddressViewTypes>("address_list");
+
+    const renderContent = (addressViewType: AddressViewTypes) => {
+        switch (addressViewType) {
+            case "address_list":
+                return <AddressList setAddressViewType={setAddressViewType} />;
+            case "address_add":
+                return <AddAddress setAddressViewType={setAddressViewType} />;
+            default:
+                break;
+        }
+    };
+
+    return <>{renderContent(addressViewType)}</>;
 };
 
 export default Address;
