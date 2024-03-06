@@ -31,7 +31,6 @@ const Account: React.FC<Props> = () => {
                     className="grid gap-8 grid-cols-1 lg:grid-cols-1-2_1-1"
                     onSelect={(selected) => {
                         setSelectedTabIndex(selected);
-                        console.log(selected);
                     }}
                 >
                     <TabList

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // Components
 import AddressList from "./AddressList";
 import AddAddress from "./AddAddress";
+import UpdateAddress from "./UpdateAddress";
 
 // Types
 import { AddressViewTypes } from "../types";
@@ -19,6 +20,10 @@ const Address: React.FC<Props> = () => {
                 return <AddressList setAddressViewType={setAddressViewType} />;
             case "address_add":
                 return <AddAddress setAddressViewType={setAddressViewType} />;
+            case "address_edit":
+                return (
+                    <UpdateAddress setAddressViewType={setAddressViewType} />
+                );
             default:
                 break;
         }

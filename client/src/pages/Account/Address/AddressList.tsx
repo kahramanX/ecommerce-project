@@ -32,7 +32,11 @@ const AddressList: React.FC<Props> = ({ setAddressViewType }) => {
                 {Array.from({ length: 10 }).map(() => {
                     return (
                         <>
-                            <AddressItem />
+                            <AddressItem
+                                onAddressUpdate={() => {
+                                    setAddressViewType("address_edit");
+                                }}
+                            />
                         </>
                     );
                 })}
