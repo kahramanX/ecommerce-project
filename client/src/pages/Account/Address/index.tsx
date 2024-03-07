@@ -1,38 +1,35 @@
-import React from "react";
-import AddressItem from "shared/AddressItem";
+import React, { useState } from "react";
 
 // Components
-import Button from "shared/Button";
-import Icon from "shared/Icon";
+import AddressList from "./AddressList";
+import AddAddress from "./AddAddress";
+import UpdateAddress from "./UpdateAddress";
+
+// Types
+import { AddressViewTypes } from "../types";
 
 type Props = {};
 
 const Address: React.FC<Props> = () => {
-    return (
-        <>
-            <div className="grid grid-cols-1 p-2 lg:p-4">
-                <Button
-                    sizes="w-full"
-                    colors="bg-grey1"
-                    spacings="py-2 mb-4"
-                    extraClass="flex items-center justify-center"
-                    buttonContent={
-                        <>
-                            <Icon name="add" />
-                            Add Address
-                        </>
-                    }
-                />
-                {Array.from({ length: 10 }).map(() => {
-                    return (
-                        <>
-                            <AddressItem />
-                        </>
-                    );
-                })}
-            </div>
-        </>
-    );
+    const [addressViewType, setAddressViewType] =
+        useState<AddressViewTypes>("address_list");
+
+    const renderContent = (addressViewType: AddressViewTypes) => {
+        switch (addressViewType) {
+            case "address_list":
+                return <AddressList setAddressViewType={setAddressViewType} />;
+            case "address_add":
+                return <AddAddress setAddressViewType={setAddressViewType} />;
+            case "address_update":
+                return (
+                    <UpdateAddress setAddressViewType={setAddressViewType} />
+                );
+            default:
+                break;
+        }
+    };
+
+    return <>{renderContent(addressViewType)}</>;
 };
 
 export default Address;

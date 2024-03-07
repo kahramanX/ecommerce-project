@@ -7,11 +7,15 @@ import Profile from "./Profile";
 import Address from "./Address";
 import Orders from "./Orders";
 import Text from "shared/Text";
+import AccountTitle from "./AccountTitle";
 
 // Swiper Components
 import { Swiper, SwiperSlide, SwiperClass } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import AccountTitle from "./AccountTitle";
+
+// Tabs
+import UpdatePassword from "./UpdatePassword";
+import Message from "./Message";
 
 type Props = {};
 
@@ -30,7 +34,6 @@ const Account: React.FC<Props> = () => {
                     className="grid gap-8 grid-cols-1 lg:grid-cols-1-2_1-1"
                     onSelect={(selected) => {
                         setSelectedTabIndex(selected);
-                        console.log(selected);
                     }}
                 >
                     <TabList
@@ -300,10 +303,10 @@ const Account: React.FC<Props> = () => {
                             <div>FOLLOWS</div>
                         </TabPanel>
                         <TabPanel>
-                            <div>MESSAGES</div>
+                            <Message />
                         </TabPanel>
                         <TabPanel>
-                            <div>UPDATE PASSWORD</div>
+                            <UpdatePassword />
                         </TabPanel>
                     </div>
                 </Tabs>

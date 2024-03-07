@@ -5,9 +5,13 @@ import Button from "shared/Button";
 import Icon from "shared/Icon";
 import Text from "shared/Text";
 
-type Props = {};
+type Props = {
+    onAddressUpdate?: (
+        e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+    ) => void | undefined;
+};
 
-const AddressItem: React.FC<Props> = () => {
+const AddressItem: React.FC<Props> = ({ onAddressUpdate }) => {
     return (
         <>
             <div className="border border-grey3 flex flex-col justify-between p-2 mb-4">
@@ -27,6 +31,9 @@ const AddressItem: React.FC<Props> = () => {
                                     <Icon name="edit_note" />
                                 </>
                             }
+                            onClick={(e) => {
+                                onAddressUpdate && onAddressUpdate(e);
+                            }}
                         />
                         <Button
                             sizes="flex items-center justify-center p-0.5"
