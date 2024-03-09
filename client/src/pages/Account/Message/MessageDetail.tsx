@@ -68,7 +68,11 @@ const MessageDetail: React.FC<Props> = ({ setMessageViewType }) => {
                                 26.01.2024 20:21
                             </span>
                         </div>
-                        <div className="text-md">Merhaba, ben müşteri</div>
+                        <div className="text-md">
+                            Merhaba, ben müşteri ben müşteri ben müşteri ben
+                            müşteri ben müşteri ben müşteri ben müşteri ben
+                            müşteri ben müşteri{" "}
+                        </div>
                     </div>
                 </div>
 
@@ -84,7 +88,11 @@ const MessageDetail: React.FC<Props> = ({ setMessageViewType }) => {
                             </span>
                         </div>
                         <div className="text-md">
-                            Merhaba, ben müşteri hizmetleri
+                            Merhaba, ben müşteri hizmetleri ben müşteri
+                            hizmetleri ben müşteri hizmetleri ben müşteri
+                            hizmetleri ben müşteri hizmetleri ben müşteri
+                            hizmetleri ben müşteri hizmetleri ben müşteri
+                            hizmetleri
                         </div>
                     </div>
                 </div>

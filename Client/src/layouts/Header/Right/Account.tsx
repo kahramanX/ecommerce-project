@@ -2,10 +2,11 @@ import React from "react";
 
 // Components
 import Text from "shared/Text";
+import { Link } from "react-router-dom";
 
 type Props = {};
 
-const Account = (props: Props) => {
+const Account = () => {
     return (
         <>
             <Text
@@ -13,7 +14,11 @@ const Account = (props: Props) => {
                 fontSize="text-md"
                 fontColor="text-grey6"
                 fontWeight="font-bold"
-                textContent="ACCOUNT"
+                textContent={
+                    <>
+                        <Link to={"/account"}>ACCOUNT</Link>
+                    </>
+                }
             />
         </>
     );
