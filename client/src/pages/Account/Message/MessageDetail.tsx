@@ -4,6 +4,7 @@ import React from "react";
 import Button from "shared/Button";
 import TextArea from "shared/TextArea";
 import Icon from "shared/Icon";
+import ChatItem from "shared/ChatItem";
 
 // Types
 import { MessageViewTypes } from "../types";
@@ -40,62 +41,29 @@ const MessageDetail: React.FC<Props> = ({ setMessageViewType }) => {
                 </div>
             </div>
             <div className="flex flex-col mb-8">
-                <div className="flex justify-start">
-                    <div className="border mb-4 p-2 lg:w-1/2 bg-violet">
-                        <div className="flex items-center mb-2">
-                            <Icon name="verified_user" extraClass="text-xs" />
-                            <span className="text-xs font-medium">
-                                Müşteri Hizmetleri
-                            </span>
-                            <span className="text-xs text-grey4 ms-2">
-                                26.01.2024 20:21
-                            </span>
-                        </div>
-                        <div className="text-md">
-                            Merhaba, ben müşteri hizmetleri
-                        </div>
-                    </div>
-                </div>
+                <ChatItem
+                    iconName={"verified_user"}
+                    userName={"Müşteri Hizmetleri"}
+                    chatDate={"26.01.2024 20:21"}
+                    chatPosition="justify-start"
+                    chatColor="bg-violet"
+                    messageContent={`Merhaba, ben müşteri hizmetleri ben müşteri
+                    hizmetleri ben müşteri hizmetleri ben müşteri
+                    hizmetleri ben müşteri hizmetleri ben müşteri
+                    hizmetleri ben müşteri hizmetleri ben müşteri
+                    hizmetleri`}
+                />
 
-                <div className="flex justify-end">
-                    <div className="border mb-4 p-2 lg:w-1/2 bg-grey2 ">
-                        <div className="flex items-center mb-2">
-                            <Icon name="verified_user" extraClass="text-xs" />
-                            <span className="text-xs font-medium">
-                                Alagar Kahraman
-                            </span>
-                            <span className="text-xs text-grey4 ms-2">
-                                26.01.2024 20:21
-                            </span>
-                        </div>
-                        <div className="text-md">
-                            Merhaba, ben müşteri ben müşteri ben müşteri ben
-                            müşteri ben müşteri ben müşteri ben müşteri ben
-                            müşteri ben müşteri{" "}
-                        </div>
-                    </div>
-                </div>
-
-                <div className="flex justify-start">
-                    <div className="border mb-4 p-2 lg:w-1/2 bg-violet">
-                        <div className="flex items-center mb-2">
-                            <Icon name="verified_user" extraClass="text-xs" />
-                            <span className="text-xs font-medium">
-                                Müşteri Hizmetleri
-                            </span>
-                            <span className="text-xs text-grey4 ms-2">
-                                26.01.2024 20:21
-                            </span>
-                        </div>
-                        <div className="text-md">
-                            Merhaba, ben müşteri hizmetleri ben müşteri
-                            hizmetleri ben müşteri hizmetleri ben müşteri
-                            hizmetleri ben müşteri hizmetleri ben müşteri
-                            hizmetleri ben müşteri hizmetleri ben müşteri
-                            hizmetleri
-                        </div>
-                    </div>
-                </div>
+                <ChatItem
+                    iconName={"face"}
+                    userName={"Alagar Kahraman"}
+                    chatDate={"26.01.2024 20:21"}
+                    chatPosition="justify-end"
+                    chatColor="bg-grey1"
+                    messageContent={`Merhaba, ben müşteri ben müşteri ben müşteri ben
+                    müşteri ben müşteri ben müşteri ben müşteri ben
+                    müşteri ben müşteri`}
+                />
             </div>
 
             <div>
