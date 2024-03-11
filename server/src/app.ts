@@ -1,6 +1,8 @@
 import express, { Request, Response } from "express";
 import dotnev from "dotenv";
 import cors from "cors";
+import routes from "./Routes/index";
+import bodyParser from "body-parser";
 
 const app = express();
 
@@ -17,6 +19,8 @@ const corsOptions = {
 
 app.use(express.json({ limit: "50mb" }));
 
+app.use(bodyParser.json());
+
 app.use(express.urlencoded({ extended: true }));
 
 // * Routes * //
@@ -28,6 +32,7 @@ try {
 
         return (diff[0] * NS_PER_SEC + diff[1]) / NS_TO_MS;
     };
+
     app.use((req, res, next) => {
         if (process.env.NODE_ENV == "dev") {
             const start = process.hrtime();
@@ -53,9 +58,8 @@ try {
         next();
     });
 
-    app.use("/api", (req: Request, res: Response) => {
-        res.json({ message: "API ROUTE" });
-    });
+    // User Routes
+    app.use("/api/v1/user", cors(corsOptions), routes.user);
 
     app.get("*", function (req, res) {
         res.status(404)
