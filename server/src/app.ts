@@ -59,7 +59,7 @@ try {
     });
 
     // User Routes
-    app.use("/api/v1/user", cors(corsOptions), routes.user);
+    app.use("/api/v1/customer", cors(corsOptions), routes.customer);
 
     app.get("*", function (req, res) {
         res.status(404)

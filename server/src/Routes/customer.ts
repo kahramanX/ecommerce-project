@@ -8,11 +8,11 @@ export default router;
 // User ----------------------------------------------------
 router.post("/create", (req, res) => {
     let token = jwt.sign(req.body, `${process.env.PRIVATE_TOKEN}`, {
-        expiresIn: "10m",
+        expiresIn: "1h",
     });
 
     res.cookie("token", token, {
-        maxAge: 300000,
+        maxAge: 3600000,
         httpOnly: true,
     });
 
