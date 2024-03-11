@@ -1,7 +1,6 @@
 import express, { Request, Response } from "express";
 import dotnev from "dotenv";
 import cors from "cors";
-import allRoutes from "express-list-endpoints";
 
 const app = express();
 
@@ -62,7 +61,7 @@ try {
         res.status(404)
             .json({
                 message: "This route is unavailable",
-                path: "Visit for more details https://github.com/kahramanX/ecommerce-project",
+                path: "Visit project's repo for more details https://github.com/kahramanX/ecommerce-project",
             })
             .end();
     });
@@ -70,38 +69,4 @@ try {
     console.log("\x1b[31m%s", "Code Error");
 }
 
-app.listen(process.env.APP_PORT, () => {
-    console.log(
-        "\x1b[31m%s",
-        "-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|",
-        "\x1b[0m"
-    );
-
-    console.log(
-        "\x1b[34m%s",
-        "Using environment :\x1b",
-        "\x1b[33m",
-        process.env.NODE_ENV,
-        "\x1b[0m"
-    );
-
-    console.log(
-        "\x1b[34m%s",
-        "Running On :\x1b",
-        "\x1b[33m",
-        +`${process.env.APP_PORT}`,
-        "\x1b[0m"
-    );
-
-    console.log("\x1b[34m%s", "Route Count : ", allRoutes(app).length);
-
-    console.log(
-        "-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|"
-    );
-
-    console.log(
-        "Server -> Server started at : ",
-        "\x1b[33m",
-        new Date().toLocaleString()
-    );
-});
+export default app;
