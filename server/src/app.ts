@@ -1,8 +1,11 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import dotnev from "dotenv";
 import cors from "cors";
-import routes from "./Routes/index";
 import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
+
+// Routes
+import routes from "Routes/index";
 
 const app = express();
 
@@ -18,6 +21,8 @@ const corsOptions = {
 };
 
 app.use(express.json({ limit: "50mb" }));
+
+app.use(cookieParser());
 
 app.use(bodyParser.json());
 
