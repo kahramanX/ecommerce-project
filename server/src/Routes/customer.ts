@@ -5,7 +5,7 @@ const router = Router();
 
 export default router;
 
-// User ----------------------------------------------------
+// Customer ----------------------------------------------------
 router.post("/create", (req, res) => {
     let token = jwt.sign(req.body, `${process.env.PRIVATE_TOKEN}`, {
         expiresIn: "1h",
