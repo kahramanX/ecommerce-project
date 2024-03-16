@@ -75,7 +75,7 @@ try {
             .end();
     });
 } catch (error) {
-    console.log("\x1b[31m%s", "Code Error");
+    console.log("\x1b[31m%s", "APP.TS Code Error", error);
 }
 
 export default app;
