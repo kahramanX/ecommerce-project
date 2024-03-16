@@ -13,7 +13,7 @@ const createCustomer = (req: Request, res: Response) => {
         httpOnly: true,
     });
 
-    res.json({ message: req.body });
+    res.json(req.body);
 };
 
 export default { createCustomer };
