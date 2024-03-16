@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import { Request, Response } from "express";
 import allRoutes from "express-list-endpoints";
 
 import app from "./src/app";
