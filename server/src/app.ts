@@ -1,11 +1,11 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import dotnev from "dotenv";
 import cors from "cors";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 
 // Routes
-import routes from "Routes/index";
+import routes from "./Routes/index";
 
 const app = express();
 
