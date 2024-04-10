@@ -68,3 +68,16 @@
 .text-activated {
     @apply bg-grey6 text-grey1;
 }
+
+// Scrollbar Styles
+*::-webkit-scrollbar {
+    @apply w-1 lg:w-2;
+}
+
+*::-webkit-scrollbar-track {
+    @apply bg-grey3 rounded-none;
+}
+
+*::-webkit-scrollbar-thumb {
+    @apply rounded-none bg-grey6;
+}
