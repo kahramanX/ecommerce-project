@@ -9,7 +9,6 @@ import Modal from "react-modal";
 // Tailwind Styles
 import "assets/index.scss";
 
-console.log("hey");
 Modal.setAppElement("#SMYRNA");
 
 ReactDOM.createRoot(document.getElementById("SMYRNA")! as HTMLElement).render(
