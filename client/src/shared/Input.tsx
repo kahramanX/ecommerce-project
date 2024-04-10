@@ -1,5 +1,9 @@
 import React, { HTMLInputTypeAttribute } from "react";
 import Icon from "./Icon";
+import { useFormContext } from "react-hook-form";
+
+// Components
+import Text from "shared/Text";
 
 type Props = {
     type: HTMLInputTypeAttribute;
@@ -8,6 +12,8 @@ type Props = {
     parentClassName?: string;
     iconClassName?: string;
     iconName?: string;
+    registerName: string;
+    errorMessage?: string | undefined;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
 const Input: React.FC<Props> = ({
@@ -17,8 +23,12 @@ const Input: React.FC<Props> = ({
     parentClassName = "",
     iconClassName = "",
     iconName = "",
+    registerName,
+    errorMessage,
     ...otherProps
 }) => {
+    const { register } = useFormContext(); // retrieve all hook methods
+
     return (
         <>
             <div className={`${parentClassName}`}>
@@ -26,11 +36,22 @@ const Input: React.FC<Props> = ({
                     className={`input ${inputClassName}`}
                     placeholder={placeholder}
                     type={type}
+                    {...(registerName != undefined
+                        ? register(registerName)
+                        : null)}
                     {...otherProps}
                 />
                 {iconName != "" && (
                     <Icon name={iconName} extraClass={iconClassName} />
                 )}
+                <Text
+                    ElementTag="div"
+                    fontSize="text-sm"
+                    fontColor="text-red"
+                    fontWeight="font-bold"
+                    extraClass="mb-4"
+                    textContent={errorMessage}
+                />
             </div>
         </>
     );
