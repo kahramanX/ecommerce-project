@@ -56,8 +56,8 @@ const Menu = (props: Props) => {
                     </button>
                     <div className="p-2 relative overflow-y-scroll h-full">
                         <h2>Hello</h2>
-                        {Array.from({ length: 30 }).map(() => {
-                            return <div>I am a modal</div>;
+                        {Array.from({ length: 30 }).map((_, index) => {
+                            return <div key={index}>I am a modal</div>;
                         })}
                     </div>
                 </div>

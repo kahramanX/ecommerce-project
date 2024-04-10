@@ -30,7 +30,7 @@ const HomePage = (): JSX.Element => {
                         pagination={true}
                         className="layered-box-shadow relative max-h-[30rem] lg:max-h-[40rem] mx-0"
                     >
-                        {[1, 2, 3].map((val, index) => {
+                        {[1, 2, 3].map((_, index) => {
                             return (
                                 <>
                                     <SwiperSlide
