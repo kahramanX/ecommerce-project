@@ -22,7 +22,6 @@ const LoginRegister: React.FC<Props> = () => {
                     <Tabs
                         className="lg:col-start-2"
                         selectedTabClassName="border-b-2 focus:outline-none"
-                        selectedIndex={1}
                     >
                         <TabList className="flex justify-center items-center gap-8 mb-10 border-b border-b-grey3">
                             <Tab className="cursor-pointer">
