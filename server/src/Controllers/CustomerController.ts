@@ -1,4 +1,4 @@
-import { Router, Request, Response } from "express";
+import { Request, Response } from "express";
 import jwt from "jsonwebtoken";
 
 //! Add all functions to the export default {} section at the bottom
@@ -13,7 +13,7 @@ const createCustomer = (req: Request, res: Response) => {
         httpOnly: true,
     });
 
-    res.json({ message: req.body });
+    res.json(req.body);
 };
 
 export default { createCustomer };
