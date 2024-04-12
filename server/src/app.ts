@@ -7,6 +7,10 @@ import cookieParser from "cookie-parser";
 // Routes
 import routes from "./Routes/index";
 
+// db
+import { sequelize } from "./Database/db";
+import { Customer } from "./Models/Customer";
+
 const app = express();
 
 dotnev.config();
@@ -37,6 +41,18 @@ try {
 
         return (diff[0] * NS_PER_SEC + diff[1]) / NS_TO_MS;
     };
+
+    sequelize.addModels([Customer]);
+
+    (async () => {
+        try {
+            await sequelize.sync({ force: true });
+
+            console.log("\x1b[32m%s", "Database synchronized ✅");
+        } catch (error) {
+            console.log("\x1b[31m%s", "⚠⚠⚠ Database NOT synchronized ⚠⚠⚠ ");
+        }
+    })();
 
     app.use((req: Request, res: Response, next: NextFunction) => {
         if (process.env.NODE_ENV == "dev") {
