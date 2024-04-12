@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express, { NextFunction, Request, Response } from "express";
 import dotnev from "dotenv";
 import cors from "cors";
 import bodyParser from "body-parser";
@@ -38,7 +38,7 @@ try {
         return (diff[0] * NS_PER_SEC + diff[1]) / NS_TO_MS;
     };
 
-    app.use((req, res, next) => {
+    app.use((req: Request, res: Response, next: NextFunction) => {
         if (process.env.NODE_ENV == "dev") {
             const start = process.hrtime();
             res.on("finish", () => {
@@ -66,7 +66,7 @@ try {
     // User Routes
     app.use("/api/v1/customer", cors(corsOptions), routes.customer);
 
-    app.get("*", function (req, res) {
+    app.get("*", function (req: Request, res: Response) {
         res.status(404)
             .json({
                 message: "This route is unavailable",
