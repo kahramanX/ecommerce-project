@@ -8,13 +8,15 @@ import * as yup from "yup";
 // Shared
 import Input from "shared/Input";
 import Button from "shared/Button";
+import SelectBox from "shared/SelectBox";
 
 type Props = {};
 
 type Inputs = {
     name: string;
     surname: string;
-    phonenumber: string;
+    phone_number: string;
+    country_code: string;
     email: string;
     password: string;
 };
@@ -22,7 +24,8 @@ type Inputs = {
 const formData: Inputs = {
     name: "",
     surname: "",
-    phonenumber: "",
+    phone_number: "",
+    country_code: "",
     email: "",
     password: "",
 };
@@ -41,11 +44,12 @@ const Register: React.FC<Props> = () => {
             .required("Zorunlu alan")
             .min(2, "Minimum 2 karakter olmalı")
             .max(30, "Maksimum karakter sınırı aşıldı"),
-        phonenumber: yup
+        phone_number: yup
             .string()
             .required("Zorunlu alan")
-            .min(10, "Minimum 10 karakter olmalı")
-            .max(11, "Maksimum karakter sınırı aşıldı"),
+            .min(5, "Minimum 5 karakter olmalı")
+            .max(15, "Maksimum karakter sınırı aşıldı"),
+        country_code: yup.string().required("Zorunlu alan"),
         email: yup
             .string()
             .trim()
@@ -57,7 +61,7 @@ const Register: React.FC<Props> = () => {
             .trim()
             .required("Zorunlu alan")
             .min(5, "Minimum 5 karakter olmalı")
-            .max(10, "Maksimum karakter sınırı aşıldı"),
+            .max(50, "Maksimum karakter sınırı aşıldı"),
     });
 
     const methods = useForm<Inputs>({
@@ -73,6 +77,24 @@ const Register: React.FC<Props> = () => {
         console.log("methods", methods);
         console.log("errors", errors);
     };
+
+    const selectBoxDummyData = [
+        {
+            id: 1,
+            name: "+90",
+            isSelected: true,
+        },
+        {
+            id: 1,
+            name: "+35",
+            isSelected: true,
+        },
+        {
+            id: 1,
+            name: "+1",
+            isSelected: true,
+        },
+    ];
 
     return (
         <>
@@ -94,14 +116,24 @@ const Register: React.FC<Props> = () => {
                         registerName="surname"
                         errorMessage={errors.errors.surname?.message?.toString()}
                     />
-                    <Input
-                        type={"text"}
-                        placeholder={"Phone Number"}
-                        parentClassName="mb-4"
-                        inputClassName="w-full"
-                        registerName="phonenumber"
-                        errorMessage={errors.errors.phonenumber?.message?.toString()}
-                    />
+                    <div className="flex mb-4 ">
+                        <SelectBox
+                            parentClassName="mr-4"
+                            registerName="country_code"
+                            errorMessage={errors.errors.country_code?.message?.toString()}
+                            options={selectBoxDummyData}
+                        />
+
+                        <Input
+                            type={"text"}
+                            placeholder={"Phone Number"}
+                            parentClassName="w-full"
+                            inputClassName="w-full"
+                            registerName="phone_number"
+                            errorMessage={errors.errors.phone_number?.message?.toString()}
+                        />
+                    </div>
+
                     <Input
                         type={"text"}
                         placeholder={"E-mail"}

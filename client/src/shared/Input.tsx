@@ -44,14 +44,16 @@ const Input: React.FC<Props> = ({
                 {iconName != "" && (
                     <Icon name={iconName} extraClass={iconClassName} />
                 )}
-                <Text
-                    ElementTag="div"
-                    fontSize="text-sm"
-                    fontColor="text-red"
-                    fontWeight="font-bold"
-                    extraClass="mb-4"
-                    textContent={errorMessage}
-                />
+
+                {errorMessage && (
+                    <Text
+                        ElementTag="div"
+                        fontSize="text-sm"
+                        fontColor="text-red"
+                        fontWeight="font-bold"
+                        textContent={errorMessage}
+                    />
+                )}
             </div>
         </>
     );
