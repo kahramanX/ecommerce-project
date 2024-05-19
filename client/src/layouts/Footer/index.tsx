@@ -23,7 +23,7 @@ const Footer = (props: Props) => {
               fontColor="text-grey6"
               fontWeight="font-black"
               extraClass="mb-4"
-              textContent="PULL&BEAR"
+              textContent="SHOP"
             />
             <Text
               ElementTag="div"
