@@ -62,6 +62,7 @@ const Profile: React.FC<Props> = () => {
               parentClassName="w-full"
               inputClassName="w-full"
               registerName="name"
+              errorMessage={errors.errors.name?.message?.toString()}
             />
             <Input
               type={"text"}
@@ -69,6 +70,7 @@ const Profile: React.FC<Props> = () => {
               parentClassName="w-full"
               inputClassName="w-full"
               registerName="surname"
+              errorMessage={errors.errors.surname?.message?.toString()}
             />
             <Input
               type={"text"}
@@ -76,6 +78,7 @@ const Profile: React.FC<Props> = () => {
               parentClassName="w-full"
               inputClassName="w-full"
               registerName="email"
+              errorMessage={errors.errors.email?.message?.toString()}
             />
             <Input
               type={"text"}
@@ -83,6 +86,7 @@ const Profile: React.FC<Props> = () => {
               parentClassName="w-full"
               inputClassName="w-full"
               registerName="phone"
+              errorMessage={errors.errors.phone?.message?.toString()}
             />
             <Input
               type={"text"}
@@ -90,6 +94,7 @@ const Profile: React.FC<Props> = () => {
               parentClassName="w-full"
               inputClassName="w-full"
               registerName="birthday"
+              errorMessage={errors.errors.birthday?.message?.toString()}
             />
             <Input
               type={"text"}
@@ -97,6 +102,7 @@ const Profile: React.FC<Props> = () => {
               parentClassName="w-full"
               inputClassName="w-full"
               registerName="gender"
+              errorMessage={errors.errors.gender?.message?.toString()}
             />
             <Button
               sizes="w-full"
