@@ -79,7 +79,7 @@ try {
         next();
     });
 
-    // User Routes
+    // Customer Routes
     app.use("/api/v1/customer", cors(corsOptions), routes.customer);
 
     app.get("*", function (req: Request, res: Response) {
